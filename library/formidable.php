@@ -2,7 +2,7 @@
 
 
 
-//add_action('frm_after_create_entry', 'economiesuisse_form_submit', 30, 2);
+add_action('frm_after_create_entry', 'economiesuisse_form_submit', 30, 2);
 function economiesuisse_form_submit($entry_id, $form_id){
 
 
