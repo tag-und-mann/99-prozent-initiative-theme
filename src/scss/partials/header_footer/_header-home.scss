@@ -272,6 +272,10 @@
       height: unset;
       min-height: 500px;
       padding-bottom: 100px;
+
+      > div{
+        width: 100%;
+      }
     }
 
   }
