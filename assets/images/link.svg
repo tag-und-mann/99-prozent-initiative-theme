@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="23px" viewBox="0 0 25 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M24.5416667,22.9583333 L6.45833333,22.9583333 L6.45833333,6.04166667 L15.5,6.04166667 L15.5,3.625 L6.45833333,3.625 C5.02458333,3.625 3.875,4.7125 3.875,6.04166667 L3.875,22.9583333 C3.875,24.2875 5.02458333,25.375 6.45833333,25.375 L24.5416667,25.375 C25.9625,25.375 27.125,24.2875 27.125,22.9583333 L27.125,14.5 L24.5416667,14.5 L24.5416667,22.9583333 Z M18.0833333,3.625 L18.0833333,6.04166667 L22.7204167,6.04166667 L10.0233333,17.9195833 L11.8445833,19.6233333 L24.5416667,7.74541667 L24.5416667,12.0833333 L27.125,12.0833333 L27.125,3.625 L18.0833333,3.625 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landingpage" transform="translate(-427.000000, -4577.000000)">
+            <g id="Group-6" transform="translate(-22.000000, 3615.000000)">
+                <g id="Group-5" transform="translate(446.000000, 959.000000)">
+                    <g id="icon/action/launch_24px">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g fill-rule="nonzero"></g>
+                        <g id="Color-/-Highlight" mask="url(#mask-2)" fill="#ff2d18" fill-rule="evenodd">
+                            <polygon id="Color" points="0 0 31 0 31 29 0 29"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

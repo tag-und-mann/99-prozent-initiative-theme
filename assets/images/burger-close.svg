@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg14"
+   version="1.1"
+   viewBox="0 0 29 21"
+   height="21px"
+   width="29px">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Group</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs18" />
+  <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+  <title
+     id="title2">Group</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <g
+     transform="rotate(42.956538,3.2989022,6.274764)"
+     style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1"
+     stroke-linecap="square"
+     fill-rule="evenodd"
+     fill="none"
+     stroke-width="1"
+     stroke="none"
+     id="Mobile">
+    <g
+       style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1"
+       stroke-width="2.5"
+       stroke="#FFFFFF"
+       transform="translate(-274,-15)"
+       id="Navi">
+      <g
+         style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1"
+         transform="translate(276,16)"
+         id="Group">
+        <line
+           style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1"
+           id="Line-2"
+           y2="0.5"
+           x2="25.222527"
+           y1="0.5"
+           x1="0" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="Mobile-3"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     stroke-linecap="square"
+     style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1"
+     transform="matrix(-0.73187082,0.68144339,0.68144339,0.73187082,24.503213,-0.56556781)">
+    <g
+       id="Navi-6"
+       transform="translate(-274,-15)"
+       stroke="#FFFFFF"
+       stroke-width="2.5"
+       style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1">
+      <g
+         id="Group-7"
+         transform="translate(276,16)"
+         style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1">
+        <line
+           x1="0"
+           y1="0.5"
+           x2="25.222527"
+           y2="0.5"
+           id="Line-2-5"
+           style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,324 @@
+.quiz {
+  font-family: $helvetica-regular;
+  background: $orange;
+  padding: 25px 70px 55px 70px;
+  box-sizing: border-box;
+  margin: 0px auto 40px;
+  width: 100%;
+  position: relative;
+
+  h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 38px;
+    font-family: $helvetica-bold;
+    font-weight: bold;
+    line-height: 44px;
+  }
+
+  h3 {
+    color: #ffffff;
+    margin-top: -10px;
+    text-align: center;
+    font-size: 32px;
+    font-family: $helvetica-regular;
+  }
+
+  h4 {
+    color: #ffffff;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 22px;
+    font-family: $helvetica-regular;
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_submit {
+    text-align: center;
+
+    button {
+      border: 2px solid $white;
+      background-color: $white;
+      color: $orange;
+      font-family: $helvetica-bold;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 9px 32px 9px 16px;
+      border-radius: 15px;
+      box-shadow: none;
+      position: relative;
+
+      &:after{
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f105";
+        font-size: 24px;
+        line-height: 24px;
+        position: absolute;
+        top: 3px;
+        right: 10px;
+      }
+
+      @include linkAnimShareBtns($white, $orange);
+
+      &:hover{
+        @include linkAnimHover();
+        color: $white;
+      }
+    }
+  }
+
+  .frm_style_formidable-style.with_frm_style input[type=text],
+  .frm_style_formidable-style.with_frm_style input[type=email] {
+    border: 2px solid $white;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 40px;
+    outline: none;
+    font-family: $helvetica-regular;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    color: $white;
+    border-radius: 15px;
+    background-color: $red;
+
+    &:focus{
+      outline: none!important;
+      box-shadow: none!important;
+      border: 2px solid $white!important;
+      background-color: transparent;
+    }
+  }
+
+
+  ::-webkit-input-placeholder {
+    color:$white!important;
+    opacity: 1!important;
+  }
+
+  ::-moz-placeholder {
+    color:$white!important;
+    opacity: 1!important;
+  }
+
+  ::-ms-placeholder {
+    color:$white!important;
+    opacity: 1!important;
+  }
+
+  ::placeholder {
+    color:$white!important;
+    opacity: 1!important;
+  }
+
+
+  .frm_forms{
+    margin-top: 30px;
+  }
+
+  .quiz_options{
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+
+    .quiz-noclickable{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      display: block;
+      background-color: transparent;
+    }
+
+    > div{
+      font-family: $helvetica-regular;
+      font-size: 22px;
+      padding-left: 36px;
+      line-height: 27px;
+      font-weight: bold;
+      display: inline-block;
+      color: $white;
+      width: 100%;
+    }
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_radio label,
+  .frm_style_formidable-style.with_frm_style .frm_checkbox label,
+  .frm_style_formidable-style.with_frm_style .frm_primary_label{
+    color: #ffffff;
+    margin-top: 0;
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: $helvetica-regular;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hide-label{
+    label {
+      display: none!important;
+    }
+  }
+
+  .frm_opt_container{
+    display: flex;
+    justify-content: center;
+
+    >div{
+      margin: 0 14px;
+    }
+  }
+
+  /* The container */
+  .container-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 14px 0;
+    color: white;
+    font-family: $helvetica-regular;
+  }
+
+
+  /* Hide the browser's default radio button */
+  .container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: -2px;
+    left: -16px;
+    height: 22px;
+    width: 22px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid $white;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container-radio:hover input ~ .checkmark {
+    background-color: transparent;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container-radio input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container-radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container-radio .checkmark:after {
+    top: 7px;
+    left: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  [type="checkbox"]:checked + span,
+  [type="checkbox"]:not(:checked) + span,
+  [type="radio"]:checked + span,
+  [type="radio"]:not(:checked) + span{
+    position: absolute;
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_blank_field label,
+  .frm_style_formidable-style.with_frm_style .frm_error{
+    color: $white;
+    font-size: 14px;
+    font-family: $helvetica-regular;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+
+
+  .frm_style_formidable-style.with_frm_style .frm_message, .frm_success_style {
+    border: 1px solid $grey-middle;
+    background-color: $grey;
+    color: $white;
+    border-radius: 4px;
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_message p{
+    color: $black;
+  }
+
+
+  .frm_style_formidable-style.with_frm_style .frm_form_field.frm_html_container,
+  .frm_message,
+  .quiz-answer-title{
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: $helvetica-bold;
+  }
+
+
+  .quiz-answer{
+    color: #ffffff;
+    margin-top: 0;
+    text-align: center;
+    font-size: 22px;
+    font-family: $helvetica-regular;
+    font-weight: bold;
+    line-height: 32px;
+  }
+
+  .quiz-answer-msg{
+    margin-bottom: 42px;
+  }
+
+}
+
+
+
+@media screen and (max-width: $mob) {
+  .quiz {
+    padding: 10px 40px 10px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    h4 {
+      margin-top: 0;
+    }
+
+  }
+
+}

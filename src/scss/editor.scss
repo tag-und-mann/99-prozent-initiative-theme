@@ -1,0 +1,36 @@
+@import 'settings/fonts';
+@import 'settings/variables';
+
+@import 'mixins/buttons-mixins';
+@import 'mixins/elements';
+
+@import 'partials/acf-gutenberg-blocks/argumente-gutenberg-block';
+@import 'partials/acf-gutenberg-blocks/darum-geths-gutenberg-block';
+
+.darum-geths-gutenberg-block .block-bg .triangle-top {
+ display: none;
+}
+
+.darum-geths-gutenberg-block .darum-gehts-block-content h2{
+  hyphens: auto;
+
+  span{
+    hyphens: unset;
+  }
+}
+
+.darum-geths-gutenberg-block .darum-gehts-block-content .left,
+.darum-geths-gutenberg-block .darum-gehts-block-content .right{
+  opacity: 1!important;
+}
+
+.argumente-gutenberg-block .image-container,
+.argumente-gutenberg-block .text-container{
+  opacity: 1!important;
+}
+
+
+.custom-button-gutenberg-block{
+  opacity: 1!important;
+}
+

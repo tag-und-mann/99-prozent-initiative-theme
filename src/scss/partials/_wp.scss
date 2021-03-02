@@ -1,0 +1,154 @@
+.wp-block-image{
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+figcaption {
+  font-family: $helvetica-oblique;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 10px 0;
+}
+
+.wp-block-file .wp-block-file__button, .wp-block-file .wp-block-file__button:visited{
+  background-color: $white;
+  background: $white;
+  color: $orange;
+  border: 2px solid $orange;
+  transition: all 0.3s linear;
+  border-radius: 0;
+  font-family: $helvetica-bold;
+
+  @include linkAnimShareBtns($white, $orange);
+
+  &:hover{
+    border: 2px solid $orange;
+    @include linkAnimHover();
+    color: $white;
+  }
+}
+
+
+.wp-block-file a{
+  hyphens: auto;
+  word-break: break-word;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.wp-block-quote{
+  margin: 50px 0 50px;
+
+  p{
+    font-size: 30px;
+    line-height: 40px;
+    color: $orange;
+    margin-bottom: 26px;
+  }
+
+  cite{
+    font-style: unset;
+
+    strong{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.post-password-form input[name="post_password"]{
+  border: 2px solid $orange;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 40px;
+  outline: none;
+  font-family: $helvetica-regular;
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  color: $orange;
+  border-radius: 0;
+  background-color: $white;
+
+  &:focus{
+    outline: none!important;
+    box-shadow: none!important;
+    border: 2px solid $orange!important;
+    background-color: transparent;
+  }
+}
+
+.post-password-form input[type="submit"]{
+  border: 2px solid $orange;
+  background-color: $white;
+  color: $orange;
+  font-family: $helvetica-regular;
+  font-size: 16px;
+  line-height: 36px;
+  padding: 0 16px 0 16px;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+
+  @include linkAnimShareBtns($white, $orange);
+
+  &:hover{
+    @include linkAnimHover();
+    color: $white;
+  }
+}
+
+@media (max-width: $mob){
+  figcaption {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-family: $helvetica-light;
+  }
+
+  .wp-block-image{
+    figcaption {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .wp-block-quote{
+    margin: 32px 0 36px;
+
+    p{
+      font-size: 20px;
+      line-height: 30px;
+      color: $orange;
+      margin-bottom: 16px;
+    }
+
+    cite{
+
+      strong{
+        font-size: 18px;
+        line-height: 20px;
+      }
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .wp-block-embed {
+    margin-bottom: 40px;
+  }
+
+  .post-password-form input[type="submit"],
+  .post-password-form input[name="post_password"]{
+    display: block;
+    margin-bottom: 10px;
+  }
+}

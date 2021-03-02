@@ -1,0 +1,162 @@
+.forms-block{
+  position: relative;
+  width: 100%;
+  padding: 0px 0 62px;
+
+  .triangle-top{
+    @include triangle_relative();
+  }
+
+  &.gray{
+    background-color: $grey_light;
+
+    .title-block{
+      .sub-heading1{
+        color: $orange;
+      }
+    }
+  }
+
+  &.orange{
+    background-color: $orange;
+
+    .title-block{
+      .sub-heading1{
+        color: $white;
+      }
+    }
+  }
+
+
+  .title-block{
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 590px;
+    margin: 0 auto;
+
+    h2{
+      margin: 0 0 32px;
+      color: $blue;
+    }
+  }
+
+  .forms{
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 82px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .form{
+      width: 33.3333%;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-color: $white;
+      padding: 60px 60px;
+      box-sizing: border-box;
+      margin: 0 20px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+
+      h2{
+        color: $blue;
+      }
+
+      &:nth-child(1){
+        transition-delay: 0.3s;
+      }
+
+      &:nth-child(2){
+        transition-delay: 0.6s;
+      }
+
+      &:nth-child(3){
+        transition-delay: 0.9s;
+      }
+
+      img{
+        margin-bottom: 12px;
+        height: 81px;
+        width: auto;
+      }
+
+      .form-title{
+        font-family: $helvetica-now-text-black;
+        font-size: 22px;
+        letter-spacing: 0.01px;
+        text-align: center;
+        line-height: 31px;
+        text-transform: uppercase;
+        margin: 0 0 42px 0;
+        color: $blue;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $tabletV){
+  .forms-block{
+    padding: 0 0 38px;
+
+    .triangle-top{
+      @include triangle_tablet();
+    }
+
+    .title-block{
+
+      h2{
+        margin: 0 0 16px;
+      }
+    }
+
+    .forms{
+      margin: 27px auto 0;
+      display: block;
+      width: 100%;
+
+      .form{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 26px;
+        margin-left: 0;
+        margin-right: 0;
+
+        &:nth-child(3),
+        &:nth-child(2),
+        &:nth-child(1){
+          transition-delay: 0s;
+        }
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        img{
+          margin-bottom: 20px;
+          height: 70px;
+          width: auto;
+        }
+
+        .forms-block .forms .form .form-title {
+          font-size: 18px;
+          line-height: 28px;
+          margin: 0 0 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .forms-block {
+    padding: 0 0 38px;
+
+    .triangle-top {
+      @include triangle_mob();
+    }
+  }
+}

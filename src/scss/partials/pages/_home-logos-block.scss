@@ -1,0 +1,140 @@
+.home-logos-block{
+  background-color: $grey-logos-bg;
+  padding: 130px 0 190px;
+  position: relative;
+
+  .title-block {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 590px;
+    margin: 0 auto;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .logos {
+    margin: 80px 0 0;
+
+    &.logos-desk{
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &.logos-mob{
+      display: none;
+
+      .link{
+        text-align: center;
+        margin-top: 10px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .logo {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+    }
+
+    .slick-track {
+      display: flex!important;
+    }
+
+    .slick-slide{
+      display: flex;
+      height: auto;
+    }
+
+    .slick-slide > div {
+      height: auto;
+      display: flex;
+      width: 100%;
+    }
+
+    .logo {
+      width: 100%;
+
+
+      .picture{
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      img{
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $tabletV){
+  .home-logos-block{
+    padding: 36px 0 56px;
+
+    .triangle-top{
+      top: -17px;
+      height: 18px;
+    }
+
+    .title-block {
+      text-align: center;
+
+      h2 {
+        margin: 0 0 20px;
+      }
+    }
+
+    .logos {
+      margin: 36px 0 0;
+
+      &.logos-mob{
+        display: block;
+      }
+
+      &.logos-desk{
+        display: none;
+      }
+
+      .logo {
+        width: 100%;
+
+        &.logo-hidden{
+          display: none;
+        }
+
+        .picture{
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+
+        img{
+          width: 40%;
+          margin: 0 auto 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .home-logos-block{
+
+    .logos {
+
+      .logo {
+
+        img{
+          width: 60%;
+        }
+      }
+    }
+  }
+}

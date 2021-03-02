@@ -1,0 +1,395 @@
+.komitee-page{
+  background-color: $grey_light;
+  padding: 0 0 84px;
+  position: relative;
+  width: 100%;
+
+  .triangle-top{
+    @include triangle_relative();
+    background-color: $orange;
+  }
+
+  .komitee-nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 64px;
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    > div{
+      width: calc(33.333% - 4px);
+      margin-bottom: 17px;
+    }
+
+
+    input{
+      display: inline-block;
+      width: 100%;
+      border: 2px solid $orange;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      height: 39px;
+      outline: none;
+      font-family: $helvetica-regular;
+      font-size: 18px;
+      line-height: 39px;
+      padding: 0 16px;
+      box-sizing: border-box;
+      color: $orange;
+      border-radius: 0;
+      background-color: transparent;
+
+      &:focus{
+        outline: none!important;
+        box-shadow: none!important;
+      }
+    }
+
+    .search{
+      position: relative;
+
+      input{
+        color: $white;
+        background-color: $orange;
+        font-family: $helvetica-bold;
+      }
+
+      img{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        width: 19px;
+        height: 19px;
+      }
+
+      ::-webkit-input-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-moz-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-ms-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+    }
+
+    ::-webkit-input-placeholder {
+      color:$orange!important;
+      opacity: 1!important;
+    }
+
+    ::-moz-placeholder {
+      color:$orange!important;
+      opacity: 1!important;
+    }
+
+    ::-ms-placeholder {
+      color:$orange!important;
+      opacity: 1!important;
+    }
+
+    ::placeholder {
+      color:$orange!important;
+      opacity: 1!important;
+    }
+  }
+
+  .komitee-nav-mob{
+    justify-content: center;
+    padding-bottom: 16px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    .search{
+      position: relative;
+      display: inline-block;
+
+      input{
+        color: $white;
+        background-color: $orange;
+        font-family: $helvetica-bold;
+        display: inline-block;
+        width: 225px;
+        border: 2px solid $orange;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        height: 40px;
+        outline: none;
+        font-size: 16px;
+        line-height: 40px;
+        padding: 0 12px;
+        box-sizing: border-box;
+        border-radius: 0;
+
+        &:focus{
+          outline: none!important;
+          box-shadow: none!important;
+        }
+      }
+
+      img{
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        width: 19px;
+        height: 19px;
+      }
+
+      ::-webkit-input-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-moz-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-ms-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+    }
+  }
+
+  .komitee-mitglieders-container{
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    .loader-fade-block{
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $grey_light;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      z-index: 7;
+    }
+  }
+
+  .komitee-persons{
+
+    .persons{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 58px;
+      width: 100%;
+
+      .slick-slide,
+      .slick-track,
+      .slick-list{
+        width: 100%;
+      }
+    }
+
+    .head-row{
+      background-color: $grey_light;
+      font-family: $helvetica-bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: $black;
+      text-align: left;
+    }
+
+    .simple-row{
+      font-family: $helvetica-regular;
+      font-size: 18px;
+      line-height: 22px;
+      color: $black;
+      text-align: left;
+
+      &.simple-row-grey{
+        background-color: $grey_light;
+      }
+
+      &.simple-row-white{
+        background-color: $white;
+      }
+    }
+
+    .person-row-content{
+      margin-left: -5px;
+      margin-right: -5px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      > div{
+        width: 25%;
+        padding: 17px 5px;
+        box-sizing: border-box;
+
+        &.funktion{
+          width: calc(22% - 4px);
+        }
+
+        &.partei{
+          width: calc(33% - 4px);
+        }
+
+        &.ort{
+          width: calc(20% - 4px);
+        }
+      }
+    }
+
+  }
+
+  .komitee-persons-mob{
+    display: none;
+
+    .persons-mob{
+
+      .person-block-container{
+        padding: 14px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        &.person-block-container-grey{
+          background-color: $grey_light;
+        }
+
+        &.person-block-container-white{
+          background-color: $white;
+        }
+      }
+
+      .person-info{
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
+
+        .person-info-row{
+          display: flex;
+          align-items: flex-start;
+
+          div{
+            width: 50%;
+            font-size: 16px;
+            line-height: 19px;
+            box-sizing: border-box;
+            padding-top: 14px;
+            padding-bottom: 14px;
+
+            &:first-child{
+              font-family: $helvetica-bold;
+              padding-right: 5px;
+            }
+
+            &:last-child{
+              font-family: $helvetica-regular;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .get-more-persons-mob{
+      padding-top: 38px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      .show-more-btn{
+        display: inline-block;
+      }
+
+      .hide-more-btn{
+        display: none;
+      }
+    }
+
+  }
+
+}
+.komitee-mitglieders-container-mob{
+
+  .loader-fade-block{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $grey_light;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    z-index: 7;
+  }
+
+}
+
+@media (max-width: $tablet) {
+  .komitee-page{
+
+    .komitee-persons{
+
+      .head-row{
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .simple-row{
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: $tabletV) {
+  .komitee-page{
+    background-color: $white;
+    padding: 26px 0 92px;
+
+    .triangle-top{
+      display: none;
+    }
+
+    .triangle-top-mob{
+      display: block;
+    }
+
+    .komitee-nav{
+      display: none;
+    }
+
+    .komitee-nav-mob{
+      display: flex;
+    }
+
+    .komitee-persons{
+      display: none;
+    }
+
+    .komitee-persons-mob{
+      display: block;
+    }
+  }
+}

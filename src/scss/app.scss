@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@import 'settings/fonts';
+@import 'settings/variables';
+
+@import 'mixins/buttons-mixins';
+@import 'mixins/elements';
+
+@import 'partials/normalize';
+@import 'partials/defaut';
+@import 'partials/wp';
+
+
+// header and footer
+@import 'partials/header_footer/header-home';
+@import 'partials/header_footer/header-page';
+@import 'partials/header_footer/single-header';
+@import 'partials/header_footer/footer';
+@import 'partials/header_footer/navigation';
+@import 'partials/header_footer/navigatin-mob';
+
+
+// elements
+@import 'partials/header_footer/lang-switcher';
+@import 'partials/socials';
+@import 'partials/socials-share';
+@import 'partials/button';
+@import 'partials/cards';
+@import 'partials/tag';
+@import 'partials/forms';
+@import 'partials/slider';
+@import 'partials/loader';
+@import 'partials/cookies';
+
+
+// parts
+@import 'partials/forms-block';
+@import 'partials/pages/home-darum-gehts-block';
+@import 'partials/pages/home-argumente-block';
+@import 'partials/pages/home-aktuell-block';
+@import 'partials/pages/home-newsletter-block';
+@import 'partials/testimonials-block';
+@import 'partials/pages/home-logos-block';
+@import 'partials/weitere-informationen';
+@import 'partials/overlay';
+
+
+// acf gutenberg blocks
+@import 'partials/acf-gutenberg-blocks/darum-geths-gutenberg-block';
+@import 'partials/acf-gutenberg-blocks/argumente-gutenberg-block';
+@import 'partials/acf-gutenberg-blocks/slider-gutenberg-block';
+@import 'partials/acf-gutenberg-blocks/quiz-gutenberg-block';
+@import 'partials/acf-gutenberg-blocks/custom_button_gutenberg_block';
+
+
+
+// pages
+@import 'partials/pages/error-404';
+@import 'partials/pages/single';
+@import 'partials/pages/aktuell-page';
+@import 'partials/pages/komitee-page';
+@import 'partials/pages/mitmachen-page';
+@import 'partials/pages/sidebar';
+
+
+
+
+
+
+
+
+

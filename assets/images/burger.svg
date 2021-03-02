@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="21px" viewBox="0 0 29 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Landingpage" transform="translate(-275.000000, -15.000000)" stroke="#000000" stroke-width="2.5">
+            <g id="Group" transform="translate(277.000000, 16.000000)">
+                <line x1="0" y1="0.5" x2="25.2225273" y2="0.5" id="Line-2"></line>
+                <line x1="0" y1="9.5" x2="25.2225273" y2="9.5" id="Line-2"></line>
+                <line x1="0" y1="18.5" x2="25.2225273" y2="18.5" id="Line-2"></line>
+            </g>
+        </g>
+    </g>
+</svg>

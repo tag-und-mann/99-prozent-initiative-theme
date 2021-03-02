@@ -1,0 +1,42 @@
+.slider-gutenberg-block{
+  margin-bottom: 63px;
+
+  .single-slider{
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-bild{
+    img{
+      width: 100%;
+    }
+
+    iframe{
+      width: 100%;
+    }
+  }
+
+  .slick-track,
+  .slick-list{
+    width: 100%;
+  }
+
+  .video-wrapper {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 56%;
+    width: 100%;
+  }
+  .video-wrapper iframe {
+    height: 100% !important;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: $mobH) {
+  .slider-gutenberg-block{
+    margin-bottom: 96px;
+  }
+}

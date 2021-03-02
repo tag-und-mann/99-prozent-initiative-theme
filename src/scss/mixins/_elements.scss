@@ -1,0 +1,52 @@
+// divider
+@mixin divider($color) {
+  height: 3px;
+  width: 105px;
+  background-color: $color;
+
+  @media (max-width: $tabletV){
+      width: 78px;
+  }
+}
+
+// triangles
+@mixin triangle() {
+  position: absolute;
+  overflow: hidden;
+  height: 325px;
+  width: 101%;
+
+  svg{
+    height: 326px;
+  }
+}
+
+@mixin triangle_relative() {
+  height: 325px;
+  overflow: hidden;
+  width: 101%;
+
+  svg{
+    height: 326px;
+  }
+}
+
+
+@mixin triangle_tablet() {
+  height: 226px;
+  overflow: hidden;
+
+  svg{
+    height: 228px;
+  }
+}
+
+@mixin triangle_mob() {
+  height: 100px;
+  overflow: hidden;
+
+  svg{
+    height: 102px;
+  }
+}
+

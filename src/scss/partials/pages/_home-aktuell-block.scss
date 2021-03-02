@@ -1,0 +1,98 @@
+.home-aktuell-block{
+  background-color: $white;
+  position: relative;
+  padding: 64px 0 0;
+
+  .triangle-top{
+    @include triangle_relative();
+    background-color: $white;
+    margin-top: 100px;
+  }
+
+  .title-block{
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 590px;
+    margin: 0 auto;
+
+    h2{
+      margin: 0 0 21px;
+    }
+  }
+
+  .link{
+    text-align: center;
+
+    &.link-main{
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+
+  .posts{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 82px -5px 40px;
+
+    .card-button{
+      padding: 8px 10px 8px 16px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    .card-container.card-1-col,
+    .card-container.card-2-col {
+      width: 33.33%;
+    }
+  }
+}
+
+
+
+@media (max-width: $tabletV){
+  .home-aktuell-block{
+
+    .triangle-top{
+      @include triangle_tablet();
+    }
+
+    .title-block{
+
+      h2{
+        margin: 0 0 12px;
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+
+    .posts{
+      margin: 28px -5px 40px;
+
+      .card-button{
+        padding: 8px 10px 8px 16px;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .card-container.card-1-col,
+      .card-container.card-2-col {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .home-aktuell-block{
+
+    .triangle-top{
+      @include triangle_mob();
+    }
+
+    .posts{
+      display: block;
+      margin: 28px 0 24px;
+    }
+  }
+}

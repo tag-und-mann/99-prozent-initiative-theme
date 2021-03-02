@@ -1,0 +1,221 @@
+.home-argumente-block{
+  padding: 89px 0 100px;
+  position: relative;
+  background-color: $orange;
+
+  .home_argumente_line_with_arrow{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 510px;
+    height: 152px;
+  }
+
+  .title-block{
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 590px;
+    margin: 0 auto;
+    padding-top: 80px;
+
+    h2{
+      margin: 0 0 21px;
+    }
+  }
+
+  .arguments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 90px;
+    width: 100%;
+    height: 100%;
+
+    .argument{
+      text-align: center;
+      width: calc(33.33% - 60px);
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-color: $white;
+      padding: 25px 20px 0;
+      margin: 0 30px 60px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+
+      &.delay-2{
+        transition-delay: 0.3s;
+      }
+
+      &.delay-3{
+        transition-delay: 0.6s;
+      }
+
+      &.active{
+        background-color: $blue;
+        height: 100%;
+
+        .argument-title,
+        .argument-number {
+          p {
+            color: $white;
+          }
+        }
+
+        .argument-text {
+          display: block;
+        }
+
+        .argument-btn{
+          margin-bottom: 45px;
+          .open{
+            display: none;
+          }
+
+          .close{
+            display: block;
+          }
+        }
+      }
+
+      .argument-top{
+        width: 100%;
+      }
+
+      .argument-number{
+        p{
+          font-family: $helvetica-now-text-black;
+          font-size: 72px;
+          line-height: 72px;
+          color: $blue;
+          margin-bottom: 10px;
+        }
+      }
+
+      .argument-title{
+        p{
+          font-family: $helvetica-now-text-black;
+          font-size: 18px;
+          line-height: 23px;
+          color: $blue;
+          letter-spacing: 0;
+          margin-bottom: 22px;
+        }
+      }
+
+      .argument-text{
+        display: none;
+
+        p{
+          font-family: $helvetica-regular;
+          font-size: 14px;
+          line-height: 22px;
+          color: $white;
+          letter-spacing: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      .argument-btn{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 45px;
+        .close{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .link{
+    margin-top: 30px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 1300px) {
+  .home-argumente-block {
+    .home_argumente_line_with_arrow {
+      width: 36%;
+      height: auto;
+      top: 1.5%;
+    }
+  }
+}
+
+@media (max-width: $tabletV){
+  .home-argumente-block{
+    padding: 20px 0 108px;
+
+    .triangle-top{
+      display: block;
+    }
+
+    .title-block{
+
+      h2{
+        margin: 0 0 14px;
+      }
+    }
+
+    .arguments{
+      display: block;
+      margin: 18px 0 43px;
+
+      .argument{
+        width: 70%;
+        padding: 20px 15px 0;
+        margin: 0 auto 40px;
+
+        &.delay-3,
+        &.delay-2{
+          transition-delay: 0s;
+        }
+
+        img{
+          width: 45%;
+          height: auto;
+        }
+
+        p{
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        .argument-number{
+          p{
+            font-size: 52px;
+            line-height: 52px;
+          }
+        }
+
+        .home-argumente-block .arguments .argument .argument-btn {
+          margin-top: 15px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .home-argumente-block{
+
+    .arguments{
+
+      .argument{
+        width: 100%;
+
+        img{
+          width: 65%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.overlay-container{
+  width: 100%;
+  background-color: $orange;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .overlay-container-inner{
+    background-color: $orange;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+
+  .overlay-close{
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover{
+      filter: invert(1);
+    }
+  }
+
+  .testimonial,
+  .komitee,
+  .newsletter{
+    display: none;
+    padding-top: 136px;
+  }
+
+  .newsletter{
+    .form{
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .overlay-header-text{
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto 74px;
+
+    h1{
+      color: $white;
+      margin-bottom: 24px;
+    }
+
+    .divider{
+      @include divider($white);
+      margin: 0 auto;
+    }
+
+    .text {
+      margin-top: 26px;
+
+      p {
+        margin-bottom: 0;
+        font-family: $helvetica-light;
+        font-size: 20px;
+        line-height: 32px;
+        color: $white;
+      }
+    }
+  }
+
+}
+
+@media (max-width: $mob){
+  .overlay-container{
+
+    .overlay-close{
+      top: 26px;
+    }
+
+    .testimonial,
+    .komitee,
+    .newsletter{
+      padding-top: 106px;
+    }
+
+    .newsletter{
+      .form{
+        max-width: unset;
+      }
+    }
+
+    .overlay-header-text{
+      text-align: left;
+      max-width: 100%;
+      margin: 0 auto 28px;
+
+      h1{
+        line-height: 36px;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      .divider{
+        margin: 0;
+      }
+
+      .text {
+        margin-top: 20px;
+
+        p {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

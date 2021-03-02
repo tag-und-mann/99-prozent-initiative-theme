@@ -1,0 +1,201 @@
+.darum-geths-gutenberg-block{
+  position: relative;
+
+  .triangle-top{
+    @include triangle_relative();
+    background-color: $orange;
+  }
+
+  .triangle-bottom{
+    @include triangle_relative();
+  }
+
+  .block-bg{
+    position: relative;
+    padding: 0 0 60px;
+
+    &.block-bg-narrow{
+      padding: 44px 0 54px;
+    }
+
+    &.block-bg-last{
+      padding: 44px 0 0;
+    }
+
+    &.block-bg-white{
+      background-color: $white;
+
+      .triangle-bottom{
+        background-color: $white;
+      }
+    }
+    &.block-bg-grey{
+      background-color: $grey_light;
+
+      .triangle-bottom{
+        background-color: $grey_light;
+      }
+    }
+  }
+
+  .darum-gehts-block-content{
+    display: flex;
+    align-items: center;
+
+    .left{
+      width: 52%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .right{
+      width: 48%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      transition-delay: 0.3s;
+    }
+
+    h2{
+      margin-top: -20px;
+      display: flex;
+      align-items: center;
+      color: $black;
+
+      span{
+        margin-right: 18px;
+        font-size: 50px;
+        line-height: 51px;
+        color: $orange;
+      }
+    }
+
+    .text-regular {
+      margin-bottom: 22px;
+
+      p {
+        font-family: $helvetica-light;
+        font-size: 18px;
+        line-height: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .text-bold {
+      position: relative;
+
+      &:before{
+        position: absolute;
+        top: 2px;
+        left: -17px;
+        display: inline-block;
+        content: url("../images/arrow-right-bold.svg");
+        height: 7px;
+        width: 14px;
+      }
+
+      p {
+        font-family: $helvetica-bold;
+        font-size: 18px;
+        line-height: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tabletV){
+  .darum-geths-gutenberg-block{
+
+    .triangle-bottom,
+    .triangle-top{
+      @include triangle_tablet();
+    }
+
+    .darum-gehts-block-content{
+
+      h2{
+        margin-top: -20px;
+        font-size: 24px;
+        line-height: 30px;
+
+        span{
+          margin-right: 10px;
+          font-size: 36px;
+          line-height: 46px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .darum-geths-gutenberg-block{
+
+    .triangle-bottom,
+    .triangle-top{
+      @include triangle_mob();
+    }
+
+    .block-bg{
+      padding: 38px 0 60px 15px;
+
+      &.block-bg-narrow{
+        padding: 44px 0 40px 15px;
+      }
+
+      &.block-bg-last{
+        padding: 44px 0 99px 15px;
+      }
+    }
+
+    .darum-gehts-block-content{
+      display: block;
+
+      .left{
+        width: 100%;
+      }
+
+      .right{
+        width: 100%;
+      }
+
+      h2{
+        margin-top: -20px;
+        margin-bottom: 16px;
+        font-size: 26px;
+        line-height: 32px;
+
+        span{
+          margin-right: 14px;
+          font-size: 38px;
+          line-height: 49px;
+          hyphens: none;
+          word-break: normal;
+        }
+      }
+
+      .text-regular {
+        margin-bottom: 22px;
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+
+      .text-bold {
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

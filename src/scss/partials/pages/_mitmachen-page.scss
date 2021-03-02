@@ -1,0 +1,39 @@
+.mitmachen-page{
+  background-color: $grey_light;
+  padding: 0 0 70px;
+  position: relative;
+  width: 100%;
+
+  .triangle-top{
+    @include triangle_relative();
+    background-color: $orange;
+  }
+
+  .form{
+    margin: 20px auto 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: $tabletV) {
+  .mitmachen-page {
+    .triangle-top{
+      @include triangle_tablet();
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .mitmachen-page{
+    padding: 0 0 66px;
+
+    .triangle-top {
+      @include triangle_mob();
+    }
+
+    .form{
+      margin: 0 auto 0;
+    }
+  }
+}

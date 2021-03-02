@@ -1,0 +1,245 @@
+button.button,
+.card-button,
+a.button{
+  display: inline-block;
+  font-family: $helvetica-bold;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  margin: 0;
+
+  div{
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover{
+    text-decoration: none;
+  }
+
+  &.button-border-red{
+    background-color: transparent;
+    color: $orange;
+    border: 2px solid $orange;
+
+    @include linkAnimShareBtns(transparent, $orange);
+
+    &:hover{
+      @include linkAnimHover();
+      color: $white!important;
+    }
+  }
+
+  &.button-border-white{
+    color: $white;
+    border: 2px solid $white;
+
+    @include linkAnimShareBtns(transparent, $white);
+
+    &:hover{
+      @include linkAnimHover();
+      color: $orange!important;
+    }
+  }
+
+  &.button-background-black{
+    color: $white;
+    border: 2px solid $white;
+    @include linkAnimShareBtns($black, $white);
+
+    &:hover{
+      @include linkAnimHover();
+      color: $black!important;
+    }
+  }
+
+  &.button-background-blue{
+    color: $orange;
+    border: 2px solid $blue;
+    @include linkAnimShareBtns($blue, $orange);
+
+    &:hover{
+      @include linkAnimHover();
+      color: $blue!important;
+    }
+  }
+
+  &.button-background-blue-text-white{
+    color: $white;
+    border: 2px solid $blue;
+    @include linkAnimShareBtns($blue, $white);
+
+    &:hover{
+      @include linkAnimHover();
+      color: $blue!important;
+    }
+  }
+
+  &.button-background-orange-text-white{
+    color: $white;
+    border: 2px solid $orange;
+    @include linkAnimShareBtns($orange, $white);
+
+    &:hover{
+      @include linkAnimHover();
+      color: $orange!important;
+    }
+  }
+
+
+
+  &.button-background-white{
+    color: $orange;
+    border: 2px solid $white;
+    @include linkAnimShareBtns($white, $orange);
+
+    &:hover{
+      @include linkAnimHover();
+      color: $white!important;
+    }
+  }
+
+
+  &.button-background-red{
+    color: $white;
+    @include linkAnimShareBtns($orange, $white);
+    border: 2px solid $orange;
+
+    &:hover{
+      @include linkAnimHover();
+      color: $orange!important;
+    }
+  }
+
+  &.button-sidebar-post,
+  &.button-single,
+  &.button-aktuell-block,
+  &.button-darum-gehts-block,
+  &.button-argumente-block,
+  &.button-forms-block{
+    padding: 10px 22px;
+  }
+
+  &.button-footer{
+    padding: 11px 22px;
+  }
+
+  &.button-card-background-black {
+    padding: 6px 11px;
+    color: $white;
+    border: 2px solid $white;
+    @include linkAnimShareBtns($black, $white);
+
+    &:hover {
+      @include linkAnimHover();
+      color: $black !important;
+    }
+  }
+
+  &.button-card-background-white{
+    padding: 6px 11px;
+    color: $black;
+    border: 2px solid $black;
+    @include linkAnimShareBtns($white, $black);
+
+    &:hover {
+      @include linkAnimHover();
+      color: $white !important;
+    }
+  }
+
+  &.button-card-background-white-border-white{
+    padding: 6px 11px;
+    color: $black;
+    border: 2px solid $white;
+    @include linkAnimShareBtns($white, $black);
+
+    &:hover {
+      @include linkAnimHover();
+      color: $white !important;
+    }
+  }
+
+  &.button-card-border-white {
+    padding: 6px 11px;
+    color: $white;
+    border: 2px solid $white;
+    @include linkAnimShareBtns($orange, $white);
+
+    &:hover {
+      @include linkAnimHover();
+      color: $orange !important;
+    }
+  }
+
+  &.logos-more-btn{
+    padding: 7px 15px;
+  }
+
+
+  &.button-aktuell-page{
+    padding: 7px 16px;
+  }
+
+  &.button-text-small{
+    font-size: 16px;
+    line-height: 16px;
+    padding: 7px 16px;
+  }
+
+}
+
+
+.card-button{
+  i{
+    margin-top: -4px;
+  }
+}
+
+
+
+@media (max-width: $tabletV) {
+  button.button,
+  .card-button,
+  a.button{
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px 12px;
+    margin: 0;
+
+    i{
+      margin-left: 10px;
+    }
+
+    &.button-forms-block{
+      font-size: 18px;
+      line-height: 18px;
+      padding: 6px 12px;
+
+      i{
+        margin-left: 10px;
+      }
+    }
+
+    &.button-darum-gehts-block{
+      font-size: 16px;
+      line-height: 16px;
+      padding: 7px 14px;
+
+      i{
+        margin-left: 10px;
+      }
+    }
+
+    &.button-argumente-block{
+      padding: 5px 10px;
+    }
+
+    &.button-footer{
+      font-size: 18px;
+      line-height: 18px;
+      padding: 8px 14px;
+    }
+  }
+}

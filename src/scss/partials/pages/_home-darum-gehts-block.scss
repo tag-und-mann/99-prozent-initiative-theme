@@ -1,0 +1,176 @@
+.home-darum-gehts-block{
+  background-color: $white;
+  padding: 0 0 132px;
+  position: relative;
+
+
+  .triangle-top{
+    @include triangle_relative();
+    background-color: $grey_light;
+  }
+
+  .home-darum-gehts-block-content{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
+  .content-block{
+    width: 50%;
+    padding-right: 3%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    h2{
+      margin: 0 0 28px;
+    }
+
+    .text{
+      margin-top: 22px;
+
+      p{
+        color: $black;
+        font-size: 20px;
+        line-height: 28px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .link{
+      margin-top: 24px;
+    }
+  }
+
+  .media-block{
+    width: 50%;
+    margin-top: 62px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.3s;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+
+    .media-video{
+      position: relative;
+      line-height: 0;
+      overflow: hidden;
+
+      iframe{
+        width: 100%!important;
+      }
+    }
+
+    video{
+      width: 100%;
+      height: auto;
+    }
+
+    .play-video{
+      width: 59px;
+      height: 59px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      &:hover{
+        rect{
+          fill: $blue
+        }
+        polygon{
+          fill: $orange;
+        }
+      }
+    }
+
+    .card-img-video-play-block{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 105%;
+      height: 105%;
+    }
+
+    .media-desc{
+      font-family: $helvetica-light;
+      font-size: 18px;
+      color: $white;
+      line-height: 28px;
+      margin-bottom: 0;
+      margin-top: 16px;
+    }
+  }
+
+}
+
+@media (max-width: $tabletV){
+  .home-darum-gehts-block{
+    padding: 0 0 70px;
+
+    .triangle-top{
+      @include triangle_tablet();
+    }
+
+    .home-darum-gehts-block-content{
+      display: block;
+    }
+
+    .content-block{
+      width: 100%;
+      padding-right: 0;
+
+      h2{
+        margin: 0 0 20px;
+      }
+
+      .text{
+        margin-top: 34px;
+      }
+
+      .link{
+        margin-top: 30px;
+      }
+    }
+
+    .media-block{
+      width: 100%;
+      margin-top: 50px;
+      padding-left: 0;
+      transition-delay: 0s;
+
+      .play-video{
+        width: 45px;
+        height: 45px;
+      }
+
+      .media-desc{
+        font-size: 16px;
+        margin-top: 8px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: $mob) {
+  .home-darum-gehts-block {
+
+    .triangle-top {
+      @include triangle_mob();
+    }
+  }
+}

@@ -1,0 +1,612 @@
+.aktuell-page{
+  background-color: $grey_light;
+  padding: 50px 0 96px;
+  position: relative;
+  width: 100%;
+
+
+  .aktuell-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    .open-posts-filter-menu{
+      .filters-count{
+        margin-left: 4px;
+      }
+    }
+
+    .search{
+      width: 204px;
+      position: relative;
+
+      img{
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        width: 19px;
+        height: 19px;
+      }
+
+      input{
+        width: 100%;
+        border: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        height: 39px;
+        outline: none;
+        font-family: $helvetica-bold;
+        font-size: 16px;
+        line-height: 39px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        color: $white;
+        border-radius: 0;
+        background-color: $grey-search;
+
+        &:focus{
+          outline: none!important;
+          box-shadow: none!important;
+        }
+      }
+
+      ::-webkit-input-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-moz-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-ms-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+    }
+
+    .filters{
+      position: relative;
+
+      .filters-hidden{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 790px;
+        background-color: $orange;
+        border-radius: 0;
+        padding: 8px 18px 20px;
+        box-sizing: border-box;
+
+        > div{
+          display: flex;
+        }
+
+        .top{
+          justify-content: space-between;
+
+          p {
+            font-family: $helvetica-bold;
+            font-size: 16px;
+            line-height: 16px;
+            color: $white;
+          }
+
+          i{
+            font-size: 24px;
+            line-height: 16px;
+            margin-left: 6px;
+          }
+
+          .close-posts-filter-menu{
+            cursor: pointer;
+            width: 23px;
+            height: 23px;
+            transition: all 0.3s linear;
+
+            &:hover{
+              filter: invert(1);
+            }
+          }
+        }
+
+        .all-tags{
+          margin-top: 24px;
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+
+          p, span{
+            font-family: $helvetica-bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: $white;
+          }
+
+          p{
+            width: 105px;
+          }
+
+          div{
+            margin-top: -7px;
+            width: calc(100% - 105px);
+
+            ul{
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+
+              li{
+                display: inline-block;
+                border: 2px solid $white;
+                font-family: $helvetica-bold;
+                border-radius: 0;
+                padding: 2px 20px;
+                margin-right: 10px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                color: $white;
+
+                &.selected{
+                  color: $orange;
+                  background-color: $white;
+
+                  @include linkAnimShareBtns($white, $orange);
+
+                  &:hover{
+                    @include linkAnimHover();
+                    color: $white!important;
+                  }
+                }
+
+                @include linkAnimShareBtns($orange, $white);
+
+                &:hover{
+                  @include linkAnimHover();
+                  color: $orange!important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .aktuell-nav-mob{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+    z-index: 10;
+
+    &.aktuell-nav-mob-visible{
+      display: flex;
+    }
+
+    .filters{
+      position: relative;
+      padding: 72px 0 72px;
+      box-sizing: border-box;
+
+      &.filter-paddings-smaller{
+        padding: 28px 0 18px;
+      }
+    }
+
+    .filter-icon{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 16px;
+      right: 0;
+    }
+
+    .close-posts-filter-menu-mob{
+      cursor: pointer;
+      width: 23px;
+      height: 23px;
+      transition: all 0.3s linear;
+      position: absolute;
+      top: 16px;
+      left: 0;
+      filter: invert(0.5);
+
+      &:hover{
+        filter: invert(0);
+      }
+    }
+
+    .search{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+
+      > div{
+        width: 148px;
+        position: relative;
+      }
+
+      img{
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        width: 19px;
+        height: 19px;
+      }
+
+      input{
+        width: 100%;
+        border: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        height: 35px;
+        outline: none;
+        font-family: $helvetica-bold;
+        font-size: 16px;
+        line-height: 35px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        color: $white;
+        border-radius: 0;
+        background-color: $grey-search;
+
+        &:focus{
+          outline: none!important;
+          box-shadow: none!important;
+        }
+      }
+
+      ::-webkit-input-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-moz-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::-ms-placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+
+      ::placeholder {
+        color:$white!important;
+        opacity: 1!important;
+      }
+    }
+
+    .show-tags{
+      justify-content: center;
+      width: 100%;
+      display: flex;
+
+      p{
+        font-family: $helvetica-bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white;
+        border-radius: 0;
+        border: 2px solid $white;
+        padding: 6px 10px;
+        cursor: pointer;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+
+        &.active{
+          background-color: $white;
+          color: $black!important;
+        }
+
+        span.filters-count{
+          margin-left: 4px;
+        }
+
+        i{
+          margin-left: 12px;
+          margin-top: 0;
+          font-size: 24px;
+          line-height: 24px;
+
+          &.fa-angle-up{
+            margin-top: -1px;
+          }
+
+          &.visible{
+            display: none;
+          }
+        }
+      }
+    }
+
+    .all-tags{
+      margin-top: 26px;
+      display: none;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      &.all-tags-visible{
+        display: flex;
+      }
+
+      p{
+        text-align: center;
+        color: $white;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: $helvetica-bold;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      div{
+        margin-top: 0;
+        width: 100%;
+
+        ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+
+          li{
+            display: inline-block;
+            border: 2px solid $white;
+            font-family: $helvetica-bold;
+            border-radius: 0;
+            padding: 7px 20px;
+            margin: 0 5px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            color: $white;
+            font-size: 14px;
+            line-height: 17px;
+
+            &.selected{
+              color: $black;
+              background-color: $white;
+
+              @include linkAnimShareBtns($white, $black);
+
+               &:hover{
+                @include linkAnimHover();
+                color: $white!important;
+              }
+
+            }
+
+            @include linkAnimShareBtns($black, $white);
+
+            &:hover{
+              @include linkAnimHover();
+              color: $black!important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .aktuell-posts-container{
+
+    .aktuell-filters-mob-icon{
+      position: relative;
+      background-color: $black;
+      width: 75px;
+      height: 75px;
+      z-index: 2;
+      cursor: pointer;
+      display: none;
+
+      img{
+        width: 100%;
+        height: auto;
+      }
+
+      &.sticky{
+        position: fixed;
+        bottom: 0;
+        left: 3%;
+      }
+    }
+
+    .loader-fade-block{
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $grey_light;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+
+    .aktuell-posts{
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 18px;
+    }
+
+    .aktuell-posts-mob{
+      display: none;
+    }
+
+    .link-container{
+
+      .hide-more-btn{
+        display: none;
+      }
+
+      &.get-more-filtered-posts,
+      &.get-more-posts{
+        text-align: center;
+      }
+    }
+
+    .link-container-mob{
+      display: none;
+
+      .hide-more-btn{
+        display: none;
+      }
+
+      &.get-more-filtered-posts-mob,
+      &.get-more-posts-mob{
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+@media (max-width: $tabletV) {
+  .aktuell-page{
+
+    .aktuell-nav{
+
+      .filters{
+
+        .filters-hidden{
+          width: 620px;
+
+          .all-tags{
+
+            div{
+
+              ul{
+
+                li{
+
+                  &.selected{
+                    color: $orange;
+                    background-color: $white;
+                    background-image: unset;
+                    background-size: unset;
+                    background-position: unset;
+
+                    &:hover{
+                      background-image: unset;
+                      background-size: unset;
+                      background-position: unset;
+                      color: $orange!important;
+                    }
+                  }
+
+                  background-image: unset;
+                  background-size: unset;
+                  background-position: unset;
+
+                  &:hover{
+                    background-image: unset;
+                    background-size: unset;
+                    background-position: unset;
+                    color: $white!important;
+                  }
+                }
+              }
+            }
+          }
+         }
+      }
+    }
+
+    .aktuell-nav-mob{
+      .all-tags{
+        div{
+          ul{
+            li{
+              &.selected{
+                color: $black;
+                background-color: $white;
+                background-image: unset;
+                background-size: unset;
+                background-position: unset;
+
+                &:hover{
+                  background-image: unset;
+                  background-size: unset;
+                  background-position: unset;
+                  color: $black!important;
+                }
+              }
+
+              background-image: unset;
+              background-size: unset;
+              background-position: unset;
+
+              &:hover{
+                background-image: unset;
+                background-size: unset;
+                background-position: unset;
+                color: $white!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: $mob) {
+  .aktuell-page{
+    padding: 36px 0 96px;
+
+    .triangle-top{
+      top: -27px;
+      height: 28px;
+    }
+
+    .aktuell-nav{
+      display: none;
+    }
+
+    .aktuell-posts-container {
+
+      .aktuell-posts {
+        display: none;
+      }
+
+      .link-container{
+        display: none;
+      }
+
+      .aktuell-posts-mob{
+        display: block;
+      }
+
+      .link-container-mob{
+        display: block;
+      }
+
+      .aktuell-filters-mob-icon{
+        display: block;
+      }
+    }
+
+  }
+}
+
+

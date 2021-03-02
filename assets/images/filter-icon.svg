@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="77px" viewBox="0 0 83 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="75" height="75"></rect>
+        <filter x="-9.3%" y="-6.7%" width="118.7%" height="118.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Aktuell--Sticky-Filterbutton" transform="translate(-13.000000, -509.000000)">
+            <g id="Group-3" transform="translate(17.000000, 511.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="filter" transform="translate(9.000000, 15.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M29.9980017,0 L2.00237307,0 C0.225810345,0 -0.670564769,2.15544071 0.588122892,3.41419259 L12,14.8284596 L12,26.5000395 C11.9999771,27.0767641 12.2489466,27.6254182 12.6829994,28.0051667 L16.6829999,31.5041094 C17.9603751,32.6217986 20,31.7341098 20,29.9989822 L20,14.8284596 L31.4121893,3.41419259 C32.6684395,2.15800322 31.7781269,0 29.9980017,0 Z M17.6,14.4 L17.6,30.4 L13.6,26.9 L13.6,14.4 L1.6,2.4 L29.6,2.4 L17.6,14.4 Z" id="Shape"></path>
+                </g>
+                <g id="search" transform="translate(38.000000, 35.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M27.807236,25.6417167 L21.1684976,19.0029784 C21.0427225,18.8772033 20.878668,18.8115815 20.7036766,18.8115815 L19.9818368,18.8115815 C21.704409,16.8155852 22.7488892,14.2180558 22.7488892,11.3744446 C22.7488892,5.09115766 17.6577316,0 11.3744446,0 C5.09115766,0 0,5.09115766 0,11.3744446 C0,17.6577316 5.09115766,22.7488892 11.3744446,22.7488892 C14.2180558,22.7488892 16.8155852,21.704409 18.8115815,19.9818368 L18.8115815,20.7036766 C18.8115815,20.878668 18.8826717,21.0427225 19.0029784,21.1684976 L25.6417167,27.807236 C25.8987354,28.0642547 26.3143401,28.0642547 26.5713588,27.807236 L27.807236,26.5713588 C28.0642547,26.3143401 28.0642547,25.8987354 27.807236,25.6417167 Z M11.3744446,20.1240174 C6.54030565,20.1240174 2.62487183,16.2085836 2.62487183,11.3744446 C2.62487183,6.54030565 6.54030565,2.62487183 11.3744446,2.62487183 C16.2085836,2.62487183 20.1240174,6.54030565 20.1240174,11.3744446 C20.1240174,16.2085836 16.2085836,20.1240174 11.3744446,20.1240174 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1544 @@
+.form{
+  .frm_form_fields .frm_fields_container{
+    display: block;
+  }
+  .with_frm_style .frm_dropzone{
+    background-color: transparent;
+  }
+  .frm_style_formidable-style.with_frm_style .frm_primary_label{
+    display: none;
+  }
+
+  .form-img-preview{
+    img{
+      max-height: 150px;
+    }
+  }
+
+
+  .form-field.show-label label{
+    display: block!important;
+    font-family: $helvetica-regular;
+    color: $orange;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .hidden_lang_field{
+    display: none!important;
+  }
+
+  .with_frm_style .frm_radio input[type=radio],
+  .with_frm_style .frm_checkbox input[type=checkbox] {
+    margin: 4px 4px 0 0;
+  }
+
+  .frm_style_formidable-style.with_frm_style textarea,
+  .frm_style_formidable-style.with_frm_style input[type=email],
+  .frm_style_formidable-style.with_frm_style input[type=text],
+  .frm_style_formidable-style.with_frm_style input[type=number] {
+    border: 1px solid $grey_medium;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 46px;
+    outline: none;
+    font-family: $helvetica-regular;
+    font-size: 18px;
+    line-height: 46px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    color: $grey_medium;
+    border-radius: 0;
+    background-color: $white;
+
+    &:focus{
+      outline: none!important;
+      box-shadow: none!important;
+      border: 1px solid $grey_medium!important;
+      background-color: transparent;
+    }
+  }
+
+  select{
+    display: none;
+  }
+
+  .form-select {
+    position: relative;
+    width: 100%;
+
+    &:after {
+      display: block;
+      color: $grey_medium;
+      font-family: FontAwesome;
+      content: "\f107";
+      font-size: 25px;
+      line-height: 25px;
+      position: absolute;
+      top: 10px;
+      left: calc(100% - 42px);
+      z-index: 2;
+    }
+
+    .select-selected {
+      background-color: $white;
+      width: 100%;
+      border: 1px solid $grey_medium;
+      height: 40px;
+      font-family: $helvetica-regular;
+      font-size: 18px;
+      line-height: 36px;
+      padding: 0 17px;
+      box-sizing: border-box;
+      color: $grey_medium;
+      position: relative;
+      z-index: 2;
+      border-radius: 0;
+
+      &.select-arrow-active{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .select-items div, .select-selected {
+      color: $grey_medium;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .select-items {
+      position: absolute;
+      background-color: $white;
+      border: 1px solid $grey_medium;
+      border-top: 1px solid $grey_medium;
+      top: 45px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      width: calc(100% - 2px);
+      border-radius: 0;
+      max-height: 220px;
+      overflow-y: auto;
+
+      > div {
+        height: 31px;
+        font-family: $helvetica-regular;
+        font-size: 18px;
+        line-height: 31px;
+        padding: 0 17px;
+        box-sizing: border-box;
+        color: $grey_medium;
+      }
+
+      div:last-child{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .select-hide {
+      display: none;
+    }
+
+    .select-items div:hover, .same-as-selected {
+      color: $black;
+    }
+  }
+
+
+
+  .checkbox-container{
+    display: block;
+    position: relative;
+    padding-left: 30px!important;
+    cursor: pointer;
+    font-size: 16px!important;
+    line-height: 22px!important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $black!important;
+    font-family: $helvetica-regular!important;
+    margin-bottom: 12px;
+    width: 40%;
+
+    a{
+      color: $black!important;
+      position: relative;
+      font-size: 16px;
+      line-height: 22px;
+      text-decoration: underline;
+
+      &:hover{
+        color: $grey_dark!important;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: $orange;
+    border-radius: 0;
+    border: 1px solid $orange;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: $orange;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: $orange;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .checkbox-container .checkmark:after {
+    top: 1px;
+    left: 5px;
+    width: 6px;
+    height: 9px;
+    border: solid $white;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_submit {
+    text-align: center;
+
+    button {
+      border: 2px solid $orange;
+      background-color: $orange;
+      color: $white;
+      font-family: $helvetica-bold;
+      font-size: 14px;
+      line-height: 14px;
+      padding: 11px 38px;
+      border-radius: 0;
+      box-shadow: none;
+      position: relative;
+      text-transform: uppercase;
+
+      @include linkAnimShareBtns($orange, $white);
+
+      &:hover{
+        @include linkAnimHover();
+        color: $orange;
+      }
+    }
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_error{
+    color: $orange;
+    font-family: $helvetica-light;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 4px;
+  }
+
+  .form_checkbox{
+    .frm_error{
+      margin-top: -10px!important;
+      padding-left: 28px;
+    }
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_error_style,
+  .frm_style_formidable-style.with_frm_style .frm_message, .frm_success_style{
+    border: 1px solid $grey_medium;
+    background-color: $grey_light;
+    border-radius: 0;
+
+    p{
+      margin-bottom: 0;
+      color: $orange;
+      font-family: $helvetica-regular;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+
+  ::-webkit-input-placeholder {
+    color:$grey_medium!important;
+    opacity: 1!important;
+  }
+
+  ::-moz-placeholder {
+    color:$grey_medium!important;
+    opacity: 1!important;
+  }
+
+  ::-ms-placeholder {
+    color:$grey_medium!important;
+    opacity: 1!important;
+  }
+
+  ::placeholder {
+    color:$grey_medium!important;
+    opacity: 1!important;
+  }
+
+
+  .form-file{
+
+    .dz-message{
+      display: flex;
+    }
+
+    .frm_icon_font,
+    .frm_small_text{
+      display: none;
+    }
+
+    .frm_dropzone{
+      min-height: unset;
+    }
+
+    .frm_dropzone.frm_single_upload {
+      max-width: unset;
+      width: auto;
+      display: inline-block;
+      margin-bottom: 8px!important;
+    }
+
+    .frm_dropzone .dz-message {
+      border: 1px solid $orange;
+      font-family: $helvetica-bold;
+      background: $orange;
+      color: $white;
+      padding: 6px 18px;
+      border-radius: 0;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      margin: 0;
+
+      @include linkAnimShareBtns($orange, $white);
+
+      &:hover{
+        @include linkAnimHover();
+        color: $orange!important;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $tabletV){
+  .form{
+    .form-field.show-label label{
+      font-size: 16px;
+    }
+
+    .frm_style_formidable-style.with_frm_style textarea,
+    .frm_style_formidable-style.with_frm_style input[type=email],
+    .frm_style_formidable-style.with_frm_style input[type=text],
+    .frm_style_formidable-style.with_frm_style input[type=number] {
+      height: 40px;
+      font-size: 16px;
+      line-height: 40px;
+      padding: 0 16px;
+    }
+
+    .frm_style_formidable-style.with_frm_style .form-field {
+      margin-bottom: 14px;
+    }
+
+    .form-select {
+
+      &:after {
+        top: 8px;
+        left: calc(100% - 36px);
+      }
+
+      .select-selected {
+        height: 40px;
+        font-size: 16px;
+        line-height: 36px;
+      }
+
+      .select-items {
+        top: 38px;
+
+        > div {
+          height: 31px;
+          font-size: 16px;
+          line-height: 31px;
+          padding: 0 17px;
+        }
+      }
+    }
+
+
+    .checkbox-container{
+      padding-left: 30px!important;
+      font-size: 16px!important;
+      line-height: 19px!important;
+      margin-bottom: 12px;
+      width: 100%;
+
+      a{
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    .form-file{
+
+      .dz-message{
+        display: flex;
+      }
+
+      .frm_icon_font,
+      .frm_small_text{
+        display: none;
+      }
+
+      .frm_dropzone{
+        min-height: unset;
+      }
+
+      .frm_dropzone.frm_single_upload {
+        max-width: unset;
+        width: auto;
+        display: inline-block;
+        margin-bottom: 8px!important;
+      }
+
+      .frm_dropzone .dz-message {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .form{
+
+    .form-file{
+      margin-bottom: 36px!important;
+    }
+
+    .form_checkbox .frm_error {
+      margin-top: 6px!important;
+    }
+  }
+}
+
+@media (max-width: 460px){
+  .form{
+
+    .form-file{
+
+      .frm_dropzone.frm_single_upload {
+        width: 100%;
+      }
+
+      .dz-message{
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
+
+
+.home-newsletter-block{
+  form{
+    position: relative;
+  }
+
+  .form-ort,
+  .form-partei,
+  .form-vorname,
+  .form-nachname,
+  .form-email,
+  .form-select{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px 25px;
+  }
+
+  .frm_style_formidable-style.with_frm_style textarea,
+  .frm_style_formidable-style.with_frm_style input[type=email],
+  .frm_style_formidable-style.with_frm_style input[type=text],
+  .frm_style_formidable-style.with_frm_style input[type=number] {
+    height: 46px;
+    line-height: 46px;
+    font-family: $helvetica-light;
+  }
+
+  .form-select{
+    width: calc(25% - 16px);
+
+    .select-selected {
+      height: 46px;
+      line-height: 42px;
+    }
+
+    .select-items {
+      left: 0px;
+      width: calc(100% - 2px);
+      top: 42px;
+    }
+  }
+
+  .form-email {
+    width: calc(25% - 16px);
+  }
+
+  .form-partei,
+  .form-vorname,
+  .form-nachname{
+    width: calc(25% - 16px);
+  }
+
+  .form_checkbox{
+    width: 230px;
+    position: absolute;
+    top: 124px;
+    left: calc(50% - 10px);
+    transform: translateX(-100%);
+  }
+
+  .checkbox-container{
+    width: 85%;
+  }
+
+
+  .frm_style_formidable-style.with_frm_style .frm_submit {
+    text-align: left;
+    position: absolute;
+    top: 124px;
+    left: calc(50% + 10px);
+
+    button{
+      margin: 0;
+    }
+  }
+
+  .open-btn-block{
+    text-align: left;
+    margin-top: 18px;
+    display: none;
+
+    .open-btn {
+      cursor: pointer;
+      display: inline-block;
+      border: 1px solid $white;
+      background-color: $white;
+      color: $orange;
+      font-family: $helvetica-bold;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 10px 26px 10px 12px;
+      border-radius: 15px;
+      box-shadow: none;
+      position: relative;
+
+      &:after{
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f105";
+        font-size: 24px;
+        line-height: 24px;
+        position: absolute;
+        top: 5px;
+        right: 8px;
+      }
+
+      @include linkAnimShareBtns($white, $orange);
+
+      &:hover{
+        @include linkAnimHover();
+        color: $white;
+      }
+    }
+  }
+
+  .close-btn-block {
+    display: none;
+    text-align: center;
+
+    .close-btn {
+      width: 147px;
+      border-radius: 15px;
+      border: 1px solid $white;
+      background-color: $orange;
+      box-sizing: border-box;
+      color: $white;
+      padding: 11px 4px 11px 4px;
+      margin: 0 0 0 4px;
+      font-size: 16px;
+      line-height: 16px;
+      display: inline-block;
+      font-family: $helvetica-bold;
+      cursor: pointer;
+
+      @include linkAnimShareBtns($orange, $white);
+
+      &:hover {
+        @include linkAnimHover();
+        color: $orange;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $tabletV){
+  .home-newsletter-block{
+
+    .form{
+      //display: none;
+    }
+
+    .form-partei,
+    .form-ort,
+    .form-vorname,
+    .form-nachname,
+    .form-email,
+    .form-select{
+      margin: 0 0 25px;
+    }
+
+    .form-select{
+
+      .select-selected {
+        height: 40px;
+        line-height: 40px;
+      }
+
+      &:after{
+        top: 8px;
+      }
+
+      .select-items {
+        left: 0px;
+        width: calc(100% - 2px);
+        top: 38px;
+      }
+
+    }
+
+    .frm_style_formidable-style.with_frm_style textarea,
+    .frm_style_formidable-style.with_frm_style input[type=email],
+    .frm_style_formidable-style.with_frm_style input[type=text],
+    .frm_style_formidable-style.with_frm_style input[type=number] {
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .form-partei,
+    .form-ort,
+    .form-select,
+    .form-vorname,
+    .form-nachname,
+    .form-email {
+      width: 100%;
+    }
+
+    .checkbox-container{
+      width: calc(100% - 30px);
+    }
+
+    .form_checkbox{
+      margin-top: 20px;
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+      width: 100%;
+    }
+
+    .checkmark {
+      top: 0px;
+    }
+
+
+    .open-btn-block {
+      //display: block;
+    }
+
+    .frm_style_formidable-style.with_frm_style .frm_submit {
+      width: 100%;
+      margin-top: 30px;
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+      text-align: center;
+
+      button{
+        width: 147px;
+        margin: 12px 0 0;
+        padding: 11px 16px 11px 16px;
+
+        &:after{
+          display: none;
+        }
+      }
+    }
+
+    .close-btn-block{
+      //display: block;
+    }
+  }
+}
+
+
+
+
+.overlay-container{
+  .form{
+
+    .form_checkbox_req{
+      .checkmark {
+        top: -2px;
+      }
+    }
+
+    .checkmark {
+      top: 1px;
+    }
+
+    .frm_style_formidable-style.with_frm_style .form-field {
+      margin-bottom: 16px;
+    }
+
+
+    .form-select {
+
+      &:after {
+        left: calc(100% - 32px);
+        top: 8px;
+        color: $white;
+      }
+
+      .select-selected {
+        border: 1px solid $white;
+        color: $white;
+        height: 46px;
+        line-height: 42px;
+      }
+
+      .select-items div, .select-selected {
+        color: $white;
+        background-color: $orange;
+      }
+
+      .select-items div:hover, .same-as-selected {
+        color: $black;
+      }
+
+      .select-items {
+        background-color: $orange;
+        border: 1px solid $white;
+        border-top: 1px solid $white;
+        width: calc(100% - 2px);
+
+        > div {
+          font-family: $helvetica-regular;
+          color: $white;
+        }
+      }
+    }
+
+    .checkbox-container {
+      color: $white!important;
+
+      a{
+        color: $white!important;
+
+        &:hover{
+          color: $grey_light!important;
+        }
+      }
+    }
+
+    .checkmark {
+      background-color: $grey_light;
+      border: 1px solid $grey_light;
+    }
+    /* On mouse-over, add a grey background color */
+    .checkbox-container:hover input ~ .checkmark {
+      background-color: $grey_light;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .checkbox-container input:checked ~ .checkmark {
+      background-color: $grey_light;
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .checkbox-container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .checkbox-container .checkmark:after {
+      top: 1px;
+      left: 5px;
+      width: 6px;
+      height: 9px;
+      border: solid $orange;
+      border-width: 0 1px 1px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .frm_style_formidable-style.with_frm_style textarea,
+    .frm_style_formidable-style.with_frm_style input[type=email],
+    .frm_style_formidable-style.with_frm_style input[type=text],
+    .frm_style_formidable-style.with_frm_style input[type=number] {
+      border: 1px solid $white;
+      color: $white;
+      background-color: $orange;
+
+      &:focus{
+        border: 1px solid $white!important;
+      }
+    }
+
+    .frm_style_formidable-style.with_frm_style .frm_error {
+      color: $white;
+    }
+
+    .frm_style_formidable-style.with_frm_style .frm_submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        border: 1px solid $white;
+        background-color: $white;
+        color: $orange;
+        padding: 10px 36px 10px 36px;
+        margin: 0 4px 0 0;
+        font-size: 18px;
+        line-height: 18px;
+
+        &:after{
+          display: none;
+        }
+
+        @include linkAnimShareBtns($white, $orange);
+
+        &:hover{
+          @include linkAnimHover();
+          color: $white;
+        }
+      }
+
+      .form-close-btn{
+        border-radius: 0;
+        border: 1px solid $white;
+        background-color: $orange;
+        color: $white;
+        padding: 10px 24px 10px 24px;
+        margin: 0 0 0 4px;
+        font-size: 18px;
+        line-height: 18px;
+        display: inline-block;
+        font-family: $helvetica-bold;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        @include linkAnimShareBtns($orange, $white);
+
+        &:hover{
+          @include linkAnimHover();
+          color: $orange;
+        }
+      }
+    }
+
+    ::-webkit-input-placeholder {
+      color:$white!important;
+      opacity: 1!important;
+    }
+
+    ::-moz-placeholder {
+      color:$white!important;
+      opacity: 1!important;
+    }
+
+    ::-ms-placeholder {
+      color:$white!important;
+      opacity: 1!important;
+    }
+
+    ::placeholder {
+      color:$white!important;
+      opacity: 1!important;
+    }
+  }
+}
+
+.overlay-container .testimonial,
+.overlay-container .komitee{
+  .form{
+    .form-email,
+    .form-ort,
+    .form-partei,
+    .form-funktion,
+    .form-vorname,
+    .form-nachname{
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .form-ort,
+    .form-funktion,
+    .form-vorname{
+      width: calc(50% - 8px);
+      margin-right: 2px;
+    }
+
+    .form-email,
+    .form-partei,
+    .form-nachname{
+      width: calc(50% - 8px);
+      margin-left: 2px;
+    }
+
+    textarea {
+      resize: none;
+      height: 186px;
+    }
+
+    .checkbox-container {
+      width: 60%;
+    }
+
+    .form-anrede {
+      width: 32%;
+    }
+
+    .frm_style_formidable-style.with_frm_style .frm_submit {
+      margin-top: 58px;
+    }
+
+    .frm_style_formidable-style.with_frm_style .form-field.form-email{
+      margin-bottom: 32px;
+    }
+
+    .form-file {
+
+      .frm_dropzone .dz-message {
+        border: 1px solid $white;
+        font-family: $helvetica-bold;
+        background: $white;
+        color: $orange;
+
+        @include linkAnimShareBtns($white, $orange);
+
+        &:hover {
+          @include linkAnimHover();
+          color: $white !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+.overlay-container .testimonial {
+  .form {
+    .frm_style_formidable-style.with_frm_style .form-field.form-email{
+      margin-bottom: 16px;
+    }
+
+    .form-file {
+      margin-bottom: 42px!important;
+
+      .frm_dropzone .dz-message {
+        border: 1px solid $white;
+        font-family: $helvetica-bold;
+        background: $white;
+        color: $orange;
+
+        @include linkAnimShareBtns($white, $orange);
+
+        &:hover {
+          @include linkAnimHover();
+          color: $white !important;
+        }
+      }
+    }
+  }
+}
+
+.overlay-container .newsletter{
+
+  .form{
+    .form-anrede {
+      width: 60%;
+    }
+
+    .checkbox-container {
+      width: 100%;
+    }
+
+    .frm_style_formidable-style.with_frm_style .form-field.form-email{
+      margin-bottom: 25px;
+    }
+
+    .frm_style_formidable-style.with_frm_style .frm_submit {
+      margin-top: 38px;
+    }
+
+  }
+}
+
+@media (max-width: $tabletV){
+  .overlay-container{
+    .form{
+
+      .form_checkbox_req{
+        .checkmark {
+          top: 0px;
+        }
+      }
+
+      .checkmark {
+        top: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .overlay-container{
+    .form{
+
+      .frm_style_formidable-style.with_frm_style .frm_submit {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        button{
+          margin-bottom: 14px;
+          min-width: 180px;
+        }
+
+        .form-close-btn{
+          margin: 0;
+          min-width: 130px;
+          margin-left: -6px;
+        }
+      }
+
+    }
+  }
+
+  .overlay-container .newsletter{
+
+    .form{
+      .form-select {
+        width: 100%;
+      }
+
+      .checkbox-container {
+        width: calc(100% - 30px);
+      }
+
+      .frm_style_formidable-style.with_frm_style .form-field.form-email{
+        margin-bottom: 30px;
+      }
+
+      .frm_style_formidable-style.with_frm_style .frm_submit {
+        margin-top: 44px;
+      }
+
+    }
+  }
+
+  .overlay-container .testimonial,
+  .overlay-container .komitee{
+
+    .form{
+
+      .form-ort,
+      .form-funktion,
+      .form-vorname{
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .form-email,
+      .form-partei,
+      .form-nachname{
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .checkbox-container {
+        width: calc(100% - 30px);
+      }
+
+      .form-select {
+        width: 100%;
+      }
+
+      .frm_style_formidable-style.with_frm_style .form-field.form_checkbox{
+        margin-bottom: 28px;
+      }
+
+      .frm_style_formidable-style.with_frm_style .form-field {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .overlay-container .testimonial {
+    .form {
+
+      .form-file {
+        margin-bottom: 30px!important;
+      }
+    }
+  }
+}
+
+
+
+
+.mitmachen-page{
+
+  .form_checkbox_1,
+  .form_checkbox_2,
+  .form-email,
+  .form-telefonnummer,
+  .form-ort,
+  .form-plz,
+  .form-strasse,
+  .form-partei,
+  .form-funktion,
+  .form-vorname,
+  .form-nachname,
+  .form-plz-half,
+  .form-strasse-half {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .form-telefonnummer,
+  .form-funktion,
+  .form-vorname{
+    width: calc(50% - 8px);
+    margin-right: 2px;
+  }
+
+  .form-email,
+  .form-partei,
+  .form-nachname,
+  .form-plz-half,
+  .form-strasse-half {
+    width: calc(50% - 8px);
+    margin-left: 2px;
+  }
+
+
+  .form-strasse{
+    width: calc(33.33% - 6px);
+    margin-right: 2px;
+  }
+
+  .form-plz{
+    width: calc(33.33% - 8px);
+    margin: 0 2px;
+  }
+
+  .form-ort{
+    width: calc(33.33% - 6px);
+    margin-left: 2px;
+  }
+
+  .form_checkbox_1{
+    width: calc(60% - 6px);
+    margin-right: 2px;
+  }
+  .form_checkbox_2{
+    width: calc(40% - 6px);
+    margin-left: 2px;
+  }
+
+  .form_checkbox{
+
+    &.form_checkbox_mochte{
+      margin-bottom: 30px!important;
+    }
+
+    &.form_checkbox_2{
+      .frm_checkbox{
+        text-align: right;
+      }
+
+      label {
+        width: auto;
+        display: inline-block;
+      }
+
+      .frm_error{
+        margin-top: -10px!important;
+        padding-left: 28px;
+      }
+    }
+  }
+
+  .form-testimonial{
+    margin-top: 28px;
+    margin-bottom: 10px!important;
+  }
+
+  .form-kommentar{
+    margin-bottom: 12px!important;
+  }
+
+
+
+  .frm_style_formidable-style.with_frm_style .form-field {
+    margin-bottom: 16px;
+  }
+
+
+  .frm_style_formidable-style.with_frm_style textarea,
+  .frm_style_formidable-style.with_frm_style input[type=email],
+  .frm_style_formidable-style.with_frm_style input[type=text],
+  .frm_style_formidable-style.with_frm_style input[type=number]{
+    border: 1px solid $orange;
+    color: $orange;
+    background-color: transparent;
+
+    &:focus{
+      border: 1px solid $orange!important;
+    }
+  }
+
+  .frm_style_formidable-style.with_frm_style textarea{
+    resize: none;
+    height: 186px;
+  }
+
+  .form-ort,
+  .form-select {
+    position: relative;
+    width: 32%;
+
+    &:after {
+      color: $orange;
+      left: calc(100% - 32px);
+      top: 8px;
+    }
+
+    .select-selected {
+      border: 1px solid $orange;
+      color: $orange;
+      background-color: $grey_light;
+      height: 46px;
+      line-height: 42px;
+    }
+
+    .select-items div, .select-selected {
+      color: $orange;
+    }
+
+    .select-items div:hover, .same-as-selected {
+      color: $black;
+    }
+
+    .select-items {
+      background-color: $grey_light;
+      border: 1px solid $orange;
+      border-top: 1px solid $orange;
+      width: calc(100% - 2px);
+
+      > div {
+        color: $orange;
+      }
+    }
+  }
+
+
+  .checkbox-container{
+    color: $orange!important;
+    font-family: $helvetica-regular!important;
+    width: 100%;
+
+    a{
+      color: $orange!important;
+
+      &:after{
+        background-color: $orange;
+      }
+    }
+  }
+
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    top: 1px;
+  }
+
+  .form_checkbox_req{
+    .checkmark {
+      top: 1px;
+    }
+  }
+
+  .frm_style_formidable-style.with_frm_style .form-html-1,
+  .frm_style_formidable-style.with_frm_style .form-html-2{
+    font-family: $helvetica-bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: $orange;
+  }
+
+  .frm_style_formidable-style.with_frm_style .form-html-1{
+    margin: 30px 0 35px;
+  }
+  .frm_style_formidable-style.with_frm_style .form-html-2{
+    margin: 60px 0 22px;
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_submit {
+
+    button {
+      border: 1px solid $orange;
+      background-color: $orange;
+      color: $white;
+      padding: 10px 36px 10px 36px;
+      margin: 26px 0 0;
+      font-size: 18px;
+      line-height: 18px;
+
+      &:after{
+        display: none;
+      }
+
+      @include linkAnimShareBtns($orange, $white);
+
+      &:hover{
+        @include linkAnimHover();
+        color: $orange;
+      }
+    }
+  }
+
+  .frm_style_formidable-style.with_frm_style .frm_error{
+    color: $black;
+    font-family: $helvetica-light;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 4px;
+    opacity: 0.5;
+  }
+
+
+  .frm_style_formidable-style.with_frm_style .frm_error_style,
+  .frm_style_formidable-style.with_frm_style .frm_message, .frm_success_style{
+    border: 1px solid $grey_medium;
+    background-color: $grey_light;
+    border-radius: 0;
+
+    p{
+      margin-bottom: 0;
+      color: $orange;
+      font-family: $helvetica-regular;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+
+  ::-webkit-input-placeholder {
+    color:$orange!important;
+    opacity: 1!important;
+  }
+
+  ::-moz-placeholder {
+    color:$orange!important;
+    opacity: 1!important;
+  }
+
+  ::-ms-placeholder {
+    color:$orange!important;
+    opacity: 1!important;
+  }
+
+  ::placeholder {
+    color:$orange!important;
+    opacity: 1!important;
+  }
+
+}
+
+@media (max-width: $tabletV){
+  .mitmachen-page{
+
+    .checkmark {
+      top: 0;
+    }
+
+    .form_checkbox_req{
+      .checkmark {
+        top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob){
+  .mitmachen-page{
+
+    .form-telefonnummer,
+    .form-funktion,
+    .form-vorname{
+      width: 100%;
+      margin-right: 0;
+    }
+
+    .form-email,
+    .form-partei,
+    .form-nachname{
+      width: 100%;
+      margin-left: 0;
+    }
+
+
+    .form-strasse{
+      width: 100%;
+      margin-right: 0;
+    }
+
+    .form-plz{
+      width: 100%;
+      margin: 0;
+    }
+
+    .form-ort{
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .form_checkbox_1{
+      width: 100%;
+      margin-right: 0;
+    }
+    .form_checkbox_2{
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .checkbox-container {
+      width: calc(100% - 30px);
+      margin-bottom: 2px;
+    }
+
+    .form_checkbox{
+
+      &.form_checkbox_mochte{
+        margin-bottom: 26px!important;
+      }
+
+      &.form_checkbox_2{
+        .frm_checkbox{
+          text-align: left;
+        }
+      }
+    }
+
+    .form-testimonial{
+      margin-top: 0;
+    }
+
+    .form-kommentar{
+      margin-bottom: 26px!important;
+    }
+
+    .frm_style_formidable-style.with_frm_style textarea{
+      resize: none;
+      height: 186px;
+    }
+
+    .form-select {
+      width: 100%;
+
+      &:after {
+        left: calc(100% - 32px);
+        top: 8px;
+      }
+
+      .select-items {
+        width: calc(100% - 2px);
+      }
+    }
+
+    .frm_style_formidable-style.with_frm_style .form-html-1,
+    .frm_style_formidable-style.with_frm_style .form-html-2{
+      font-family: $helvetica-bold;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .frm_style_formidable-style.with_frm_style .form-html-1{
+      margin: 34px 0 20px;
+    }
+    .frm_style_formidable-style.with_frm_style .form-html-2{
+      margin: 40px 0 18px;
+    }
+
+    .frm_style_formidable-style.with_frm_style .frm_submit {
+
+      button {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+
+  }
+}

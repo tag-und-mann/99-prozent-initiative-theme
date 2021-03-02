@@ -1,0 +1,246 @@
+.lang-switcher{
+  height: 20px;
+  width: 20px;
+  margin-left: 72px;
+  margin-top: -16px;
+  display: block;
+
+  .wpml-ls-legacy-dropdown {
+    width: inherit;
+    height: inherit;
+    max-width: unset;
+    display: inline-block;
+
+    a.wpml-ls-item-toggle:after {
+      content: '';
+      display: none;
+    }
+
+    ul{
+      width: inherit;
+      height: inherit;
+      border: 2px solid $orange;
+
+      li{
+        line-height: 0;
+        font-size: 0;
+
+        a{
+          height: 20px;
+          font-size: 12px;
+          line-height: 12px;
+          text-transform: uppercase;
+          font-family: $helvetica-bold;
+          text-decoration: none;
+          color: $white;
+          border-radius: 0;
+          padding: 0;
+          border: none;
+          background-color: $orange;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover{
+            background-color: $white;
+            color: $orange;
+          }
+        }
+      }
+    }
+
+    &:hover{
+      ul{
+
+        a{
+          background-color: $white;
+          color: $orange;
+        }
+
+        li {
+
+          ul{
+            width: 20px;
+            border-bottom: 2px solid $orange;
+            border-top: 1px solid $orange;
+            margin-left: -2px;
+
+            a:hover{
+              color: $white;
+              background-color: $orange;
+            }
+          }
+        }
+      }
+    }
+
+    .wpml-ls-sub-menu {
+      border: 2px solid $orange;
+
+      li{
+        background-color: $orange;
+      }
+    }
+
+  }
+}
+
+
+
+footer{
+  .lang-switcher{
+    display: inline-block;
+    margin-left: 0;
+    height: 20px;
+    width: 20px;
+    margin-right: 2px;
+    padding-top: 3px;
+
+    .wpml-ls-legacy-dropdown {
+
+      ul{
+        border: 2px solid $white;
+
+        li{
+
+          a{
+            color: $orange;
+            background-color: $white;
+
+            &:hover{
+              background-color: $orange;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      &:hover{
+        ul{
+
+          a{
+            background-color: $orange;
+            color: $white;
+          }
+
+          li {
+            ul{
+              border-bottom: 2px solid $white;
+              border-top: 1px solid $white;
+
+              a:hover{
+                background-color: $white;
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+      .wpml-ls-sub-menu {
+        border: 2px solid $white;
+
+        li{
+          background-color: $orange;
+        }
+      }
+    }
+  }
+}
+
+
+.mobile-menu{
+  .lang-switcher{
+    height: 20px;
+    width: 20px;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+
+    .wpml-ls-legacy-dropdown {
+      height: 20px;
+      width: 20px;
+
+      a.wpml-ls-item-toggle:after {
+        content: url("../images/menu-arrow-down-white.svg");
+      }
+
+      ul{
+        border: 2px solid $white;
+
+        li{
+
+          a{
+            color: $white;
+            background-color: transparent;
+            line-height: 33px;
+
+            span{
+              line-height: 33px;
+              height: 33px;
+              vertical-align: unset;
+            }
+
+            &:hover{
+              background-color: $orange;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      &:hover{
+        ul{
+
+          a{
+            background-color: $orange;
+            color: $white;
+          }
+
+          li {
+            ul{
+              border-bottom: 2px solid $white;
+              border-top: 1px solid $white;
+
+              a:hover{
+                color: $orange;
+                background-color: $white;
+              }
+            }
+          }
+        }
+      }
+      .wpml-ls-sub-menu {
+        background-color: $orange;
+        li{
+          background-color: $orange;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: $tablet){
+  .lang-switcher {
+    margin-left: 42px;
+    margin-top: 0;
+  }
+}
+
+
+@media (max-width: $tabletV){
+
+  .mobile-menu,
+  footer{
+    .lang-switcher{
+      margin-left: 0;
+
+      //margin-bottom: 36px;
+      //text-align: left;
+      //margin-top: 33px;
+      //width: 100%;
+      //display: flex;
+      //justify-content: center;
+    }
+  }
+}

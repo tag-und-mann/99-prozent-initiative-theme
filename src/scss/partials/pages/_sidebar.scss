@@ -1,0 +1,47 @@
+.single-sidebar-inner-container{
+  box-sizing: border-box;
+  padding: 0 39px;
+  margin-top: 63px;
+
+
+  h3{
+    margin: 0 0 23px;
+    color: $white;
+  }
+
+  .sidebar-post{
+    padding-bottom: 46px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid $white;
+
+    &:last-child{
+      border-bottom: none;
+      margin-bottom: 27px;
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-post-content{
+      .date{
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 13px;
+        color: $white;
+      }
+
+      .divider{
+        @include divider($white);
+      }
+
+      .title{
+        margin: 13px 0 30px;
+        color: $white;
+      }
+
+    }
+  }
+}
