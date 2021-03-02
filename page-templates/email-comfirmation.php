@@ -78,7 +78,7 @@ if(isset($_GET['id']) && isset($_GET['email'])){
 
     </main>
 
-    <?php set_query_var( 'forms_block_bg_color', 'orange' ); ?>
+    <?php set_query_var( 'forms_block_bg_color', 'gray' ); ?>
     <?php set_query_var( 'form_block_show_line', true ); ?>
     <?php get_template_part( 'template-parts/content', 'forms-block' ); ?>
 
