@@ -9,11 +9,10 @@
   }
 
   h1{
-    padding-left: 14px;
     width: 50%;
     padding-right: 20px;
     font-size: 70px;
-    line-height: 118px;
+    line-height: 130px;
     margin-bottom: 0;
     font-family: $helvetica-now-text-black;
     color: $blue;
@@ -21,10 +20,12 @@
     word-break: break-word;
 
     span {
-      box-shadow: 0.2em 0 0 rgba($white,1), -0.2em 0 0 rgba($white,1);
+      box-shadow: 0 15px 0 rgba($white,1), 0 -3px 0 rgba($white,1);
       background-color: rgba($white,1);
       -webkit-box-decoration-break: clone;
       color: $blue;
+      line-height: 140px;
+      padding: 0 10px;
     }
 
     &:after{
@@ -38,6 +39,7 @@
   .text {
     width: 50%;
     padding-left: 20px;
+    margin-top: 16px;
 
     p {
       margin-bottom: 0;
@@ -68,11 +70,15 @@
     h1{
       font-size: 22px;
       line-height: 40px;
-      margin-bottom: 6px;
+      margin-bottom: 36px;
       margin-top: 0;
       width: 100%;
       padding-right: 0;
-      padding-left: 3px;
+
+      span{
+        box-shadow: 0 5px 0 rgba($white,1), 0 -3px 0 rgba($white,1);
+        line-height: 52px;
+      }
     }
 
     .heading1{

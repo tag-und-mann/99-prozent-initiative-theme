@@ -92,9 +92,8 @@
     }
 
     h1{
-      padding-left: 14px;
       font-size: 74px;
-      line-height: 124px;
+      line-height: 130px;
       margin-bottom: 22px;
       font-family: $helvetica-now-text-black;
       color: $blue;
@@ -102,10 +101,12 @@
       word-break: break-word;
 
       span {
-        box-shadow: 0.2em 0 0 rgba($white,1), -0.2em 0 0 rgba($white,1);
+        box-shadow: 0 10px 0 rgba($white,1), 0 -3px 0 rgba($white,1);
         background-color: rgba($white,1);
         -webkit-box-decoration-break: clone;
         color: $blue;
+        line-height: 130px;
+        padding: 0 10px;
       }
 
       &:after{
@@ -235,9 +236,13 @@
 
       h1{
         font-size: 38px!important;
-        line-height: 66px!important;
+        line-height: 78px!important;
         margin-top: 0;
-        padding-left: 8px;
+
+        span{
+          line-height: 72px!important;
+          box-shadow: 0 10px 0 rgba($white,1), 0 -3px 0 rgba($white,1);
+        }
       }
 
       p{

@@ -40,7 +40,7 @@ if(ICL_LANGUAGE_CODE == 'de'){
                 }
 
                 $header_text_font_size = get_sub_field('font_size');
-                $header_text_line_height = (int)get_sub_field('font_size') * 1.7;
+                $header_text_line_height = (int)get_sub_field('font_size') * 2;
                 ?>
 
                 <div class="home-header-bg home-header-bg-news" style="background-image: url('<?php echo $bg_img_url; ?>')">
@@ -65,7 +65,7 @@ if(ICL_LANGUAGE_CODE == 'de'){
                                             font-size: <?php echo $header_text_font_size . 'px'; ?>;
                                             line-height: <?php echo $header_text_line_height . 'px'; ?>;"
                                     >
-                                        <span>
+                                        <span style="line-height: <?php echo $header_text_line_height . 'px'; ?>;">
                                             <?php echo get_sub_field('text'); ?>
                                         </span>
                                     </h1>
