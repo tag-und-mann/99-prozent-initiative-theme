@@ -63,7 +63,6 @@
 </head>
 <body <?php body_class(); ?>>
 
-
 <script>
     var controller = new ScrollMagic.Controller();
 

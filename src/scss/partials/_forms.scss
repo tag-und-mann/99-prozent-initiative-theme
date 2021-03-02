@@ -474,6 +474,89 @@
 
 
 
+.forms-block{
+  .form-funktion,
+  .form-ort,
+  .form-partei,
+  .form-vorname,
+  .form-nachname,
+  .form-email,
+  .form-select{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px 25px;
+  }
+
+  .frm_style_formidable-style.with_frm_style textarea,
+  .frm_style_formidable-style.with_frm_style input[type=email],
+  .frm_style_formidable-style.with_frm_style input[type=text],
+  .frm_style_formidable-style.with_frm_style input[type=number] {
+    height: 46px;
+    line-height: 46px;
+    font-family: $helvetica-light;
+  }
+
+  .form-select{
+    width: calc(25% - 16px);
+
+    .select-selected {
+      height: 46px;
+      line-height: 42px;
+    }
+
+    .select-items {
+      left: 0px;
+      width: calc(100% - 2px);
+      top: 42px;
+    }
+  }
+
+  .form-email {
+    width: calc(25% - 16px);
+  }
+
+  .form-partei,
+  .form-vorname,
+  .form-nachname{
+    width: calc(25% - 16px);
+  }
+
+  .checkbox-container{
+    width: 85%;
+  }
+
+}
+
+@media (max-width: $tabletV){
+  .forms-block{
+
+    .form-select{
+      width: 100%;
+      margin: 0 0 25px;
+    }
+
+    .form-email {
+      width: 100%;
+      margin: 0 0 25px;
+    }
+
+    .form-partei,
+    .form-funktion,
+    .form-vorname,
+    .form-nachname{
+      width: 100%;
+      margin: 0 0 25px;
+    }
+
+    .checkbox-container{
+      width: 100%;
+    }
+  }
+}
+
+
+
+
 .home-newsletter-block{
   form{
     position: relative;
@@ -1139,7 +1222,6 @@
     }
   }
 }
-
 
 
 

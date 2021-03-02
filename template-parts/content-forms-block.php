@@ -14,60 +14,46 @@
                 <h2 class="heading1"><?php echo __('Helfen auch Sie mit!', 'economiesuisse') ?></h2>
             </div>
 
-            <div class="forms">
-
-                <div class="form" data-counter="1">
-                    <?php if(get_field('komitee_form_icon', 'option')): ?>
-                        <img src="<?php echo get_field('komitee_form_icon', 'option'); ?>">
-                    <?php endif; ?>
-
-                    <div>
-                        <p class="form-title"><?php echo get_field('komitee_form_titel', 'option'); ?></p>
-                        <a href="#" class="button button-background-blue-text-white button-forms-block overlay-open" data-type="komitee" id="komitee-form_overlay">
-                            <div>
-                                <span><?php echo __('Mitmachen', 'economiesuisse') ?></span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-
-                <script>
-                    new ScrollMagic.Scene({
-                        triggerElement: ".forms-block-content .title-block",
-                        triggerHook: 0.9,
-                        offset: 0
-                    })
-                        .setClassToggle(".forms-block-content .title-block", "visibleBlock")
-                        .addTo(controller);
-
-                    new ScrollMagic.Scene({
-                        triggerElement: ".forms-block-content .form[data-counter='1']",
-                        triggerHook: 0.9,
-                        offset: 0
-                    })
-                        .setClassToggle(".forms-block-content .form[data-counter='1']", "visibleBlock")
-                        .addTo(controller);
-
-                    new ScrollMagic.Scene({
-                        triggerElement: ".forms-block-content .form[data-counter='2']",
-                        triggerHook: 0.9,
-                        offset: 0
-                    })
-                        .setClassToggle(".forms-block-content .form[data-counter='2']", "visibleBlock")
-                        .addTo(controller);
-
-                    new ScrollMagic.Scene({
-                        triggerElement: ".forms-block-content .form[data-counter='3']",
-                        triggerHook: 0.9,
-                        offset: 0
-                    })
-                        .setClassToggle(".forms-block-content .form[data-counter='3']", "visibleBlock")
-                        .addTo(controller);
-                </script>
+            <div class="form" data-counter='1'>
+                <?php echo do_shortcode('[formidable id='. get_field('komitee_formidable_form_shortcode_id', 'option') . ']'); ?>
             </div>
+
         </div>
     </div>
+
+    <script>
+        new ScrollMagic.Scene({
+            triggerElement: ".forms-block-content .title-block",
+            triggerHook: 0.9,
+            offset: 0
+        })
+            .setClassToggle(".forms-block-content .title-block", "visibleBlock")
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: ".forms-block-content .form[data-counter='1']",
+            triggerHook: 0.9,
+            offset: 0
+        })
+            .setClassToggle(".forms-block-content .form[data-counter='1']", "visibleBlock")
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: ".forms-block-content .form[data-counter='2']",
+            triggerHook: 0.9,
+            offset: 0
+        })
+            .setClassToggle(".forms-block-content .form[data-counter='2']", "visibleBlock")
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: ".forms-block-content .form[data-counter='3']",
+            triggerHook: 0.9,
+            offset: 0
+        })
+            .setClassToggle(".forms-block-content .form[data-counter='3']", "visibleBlock")
+            .addTo(controller);
+    </script>
 </section>
 
 <script>
