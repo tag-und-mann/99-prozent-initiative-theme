@@ -134,6 +134,11 @@
             });
 
             changeHomeHeaderSliderNavigationPosition();
+            
+            setTimeout(function () {
+                changeHomeHeaderSliderNavigationPosition();
+            }, 500);
+
 
             home_header_slider.find('.slick-next').on('click', function(event, slick, currentSlide){
                 changeHomeHeaderSliderNavigationPosition();
