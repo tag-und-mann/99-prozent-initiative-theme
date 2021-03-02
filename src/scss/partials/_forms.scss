@@ -477,8 +477,7 @@
 .forms-block{
 
   .form{
-    margin-left: -6px;
-    margin-right: -6px;
+    width: 100%;
 
     .form-funktion,
     .form-ort,
@@ -489,7 +488,9 @@
     .form-select{
       display: inline-block;
       vertical-align: top;
-      margin: 0 6px 25px;
+      padding: 0 6px 0;
+      margin-bottom: 25px;
+      box-sizing: border-box;
     }
 
     .frm_style_formidable-style.with_frm_style textarea,
@@ -502,7 +503,7 @@
     }
 
     .form-select{
-      width: calc(25% - 16px);
+      width: calc(25% - 4px);
 
       .select-selected {
         height: 46px;
@@ -517,13 +518,15 @@
     }
 
     .form-email {
-      width: calc(25% - 16px);
+      width: calc(25% - 4px);
     }
 
+    .form-ort,
+    .form-funktion,
     .form-partei,
     .form-vorname,
     .form-nachname{
-      width: calc(25% - 16px);
+      width: calc(25% - 4px);
     }
 
     .checkbox-container{
@@ -538,8 +541,15 @@
   .forms-block {
 
     .form {
-      margin-left: 0;
-      margin-right: 0;
+      .form-funktion,
+      .form-ort,
+      .form-partei,
+      .form-vorname,
+      .form-nachname,
+      .form-email,
+      .form-select{
+        padding: 0;
+      }
 
       .form-select {
         width: 100%;
@@ -561,7 +571,7 @@
 
       .checkbox-container {
         width: 90%;
-        margin-left: 0;
+        margin-left: 2px;
       }
     }
   }
