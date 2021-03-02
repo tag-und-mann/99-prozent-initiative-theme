@@ -14,11 +14,11 @@
 
 
     <?php if(ICL_LANGUAGE_CODE == 'fr'): ?>
-        <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/Nein_zur_UVI_favicon_fr.png" sizes="48x48">
+        <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon_fr.png" sizes="48x48">
     <?php elseif(ICL_LANGUAGE_CODE == 'it'): ?>
-        <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/Nein_zur_UVI_favicon_it.png" sizes="48x48">
+        <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon_it.png" sizes="48x48">
     <?php else: ?>
-        <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/Nein_zur_UVI_favicon.png" sizes="48x48">
+        <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" sizes="48x48">
     <?php endif; ?>
 
 
