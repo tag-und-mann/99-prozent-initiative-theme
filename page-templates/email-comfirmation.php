@@ -42,9 +42,8 @@ if(isset($_GET['id']) && isset($_GET['email'])){
     <main class="default-page">
 
         <div class="triangle-top">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon fill="#ffffff" points="0,100 100,0 100,100"/>
-            </svg>
+            <?php set_query_var( 'bg_color', '#ffffff' ); ?>
+            <?php get_template_part( 'template-parts/lines/content', 'header-line' ); ?>
         </div>
 
         <section class="container-min">
@@ -79,8 +78,11 @@ if(isset($_GET['id']) && isset($_GET['email'])){
 
     </main>
 
+    <?php set_query_var( 'forms_block_bg_color', 'orange' ); ?>
+    <?php set_query_var( 'form_block_show_line', true ); ?>
     <?php get_template_part( 'template-parts/content', 'forms-block' ); ?>
 
+    <?php set_query_var( 'testimonials_block_show_line', true ); ?>
     <?php get_template_part( 'template-parts/content', 'testimonials-block' ); ?>
 
 <?php endwhile; ?>
