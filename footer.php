@@ -91,12 +91,12 @@
 
         <div class="col-3">
             <p class="footer-col-title"><?php echo __('Kontakt', 'economiesuisse') ?></p>
-            <?php if(get_field('footer_copyright', 'option')): ?>
-                <div class="copyright"><?php echo apply_filters('the_content', get_field('footer_copyright', 'option')); ?></div>
-            <?php endif; ?>
-
             <?php if(get_field('footer_email', 'option')): ?>
                 <a href="mailto:<?php echo get_field('footer_email', 'option'); ?>" class="email"><?php echo get_field('footer_email', 'option'); ?></a><br>
+            <?php endif; ?>
+
+            <?php if(get_field('footer_copyright', 'option')): ?>
+                <div class="copyright"><?php echo apply_filters('the_content', get_field('footer_copyright', 'option')); ?></div>
             <?php endif; ?>
 
             <?php if(get_field('footer_datenschutzerklarung_link', 'option')): ?>
