@@ -209,7 +209,7 @@ function my_set_sortable_columns( $columns )
     $columns['Genehmigte E-Mail'] = 'Genehmigte E-Mail';
     $columns['Testimonial member'] = 'Testimonial member';
     $columns['Komitee member'] = 'Komitee member';
-    $columns['Webinarr'] = 'Webinar';
+    $columns['Webinar'] = 'Webinar';
 
     return $columns;
 }
