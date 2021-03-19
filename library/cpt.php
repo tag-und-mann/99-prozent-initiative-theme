@@ -113,6 +113,7 @@ add_filter( 'manage_person_posts_columns', 'set_custom_edit_person_columns' );
 function set_custom_edit_person_columns($columns) {
     $columns['Komiteemitglied auf Webseite anzeigen'] = __( 'Komiteemitglied auf Webseite anzeigen', 'your_text_domain' );
     $columns['Komitee member'] = __( 'Komitee member', 'your_text_domain' );
+    $columns['Webinar'] = __( 'Webinar', 'your_text_domain' );
     $columns['Testimonial bestätigen'] = __( 'Testimonial bestätigen', 'your_text_domain' );
     $columns['Testimonial auf Webseite anzeigen'] = __( 'Testimonial auf Webseite anzeigen', 'your_text_domain' );
     $columns['Testimonial member'] = __( 'Testimonial member', 'your_text_domain' );
@@ -169,10 +170,16 @@ function custom_person_column( $column, $post_id ) {
             }
             echo $status_show;
             break;
-
-
         case 'Komitee member' :
             if(get_field( 'person_komitee_member', $post_id ) == 1){
+                $status_show = 'Ja';
+            }else{
+                $status_show = 'Nein';
+            }
+            echo $status_show;
+            break;
+        case 'Webinar' :
+            if(get_field( 'person_webinar', $post_id ) == 1){
                 $status_show = 'Ja';
             }else{
                 $status_show = 'Nein';
@@ -202,6 +209,7 @@ function my_set_sortable_columns( $columns )
     $columns['Genehmigte E-Mail'] = 'Genehmigte E-Mail';
     $columns['Testimonial member'] = 'Testimonial member';
     $columns['Komitee member'] = 'Komitee member';
+    $columns['Webinarr'] = 'Webinar';
 
     return $columns;
 }
@@ -241,6 +249,11 @@ function my_sort_custom_column_query( $query )
 
     if ( 'Komitee member' == $orderby ) {
         $query->set( 'meta_key', 'person_komitee_member' );
+        $query->set( 'orderby', 'meta_value' );
+    }
+
+    if ( 'Webinar' == $orderby ) {
+        $query->set( 'meta_key', 'person_webinar' );
         $query->set( 'orderby', 'meta_value' );
     }
 

@@ -48,6 +48,7 @@ function economiesuisse_form_submit($entry_id, $form_id){
                 $temp[0] == 'mochte_3' ||
                 $temp[0] == 'mochte_4' ||
                 $temp[0] == 'komitee_member' ||
+                $temp[0] == 'webinar' ||
                 $temp[0] == 'testimonial_member' ||
                 $temp[0] == 'agree') {
                 $val = 1;
@@ -91,6 +92,7 @@ function economiesuisse_form_submit($entry_id, $form_id){
 
             $newsletter = false;
             $komitee_member = false;
+            $webinar = false;
             $testimonial_member = false;
 
             $person_id = $person[0]->ID;
@@ -104,6 +106,10 @@ function economiesuisse_form_submit($entry_id, $form_id){
 
                     if ($key == 'person_komitee_member') {
                         $komitee_member = true;
+                    }
+
+                    if ($key == 'person_webinar') {
+                        $webinar = true;
                     }
 
                     if ($key == 'person_testimonial_member') {
@@ -189,6 +195,10 @@ function economiesuisse_form_submit($entry_id, $form_id){
                 if (!$komitee_member) {
                     update_field('person_komitee_member', 0, $person_id);
                     update_field('person_approved', 0, $person_id);
+                }
+
+                if (!$webinar) {
+                    update_field('person_webinar', 0, $person_id);
                 }
 
                 if (!$testimonial_member) {
