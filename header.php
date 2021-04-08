@@ -65,17 +65,14 @@
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MBPD4LZ');</script>
     <!-- End Google Tag Manager -->
-     
-    Fügen Sie diesen Code außerdem direkt nach dem eröffnenden <body>-Tag ein: 
- 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-MBPD4LZ
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
  
 </head>
 <body <?php body_class(); ?>>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-MBPD4LZ
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <script>
     var controller = new ScrollMagic.Controller();
