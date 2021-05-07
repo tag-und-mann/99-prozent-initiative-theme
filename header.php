@@ -45,7 +45,6 @@
     <meta property="og:url" content="<?php echo $share_url; ?>" id="meta_share_url" />
     <meta property="og:image" content="<?php echo $share_image; ?>"  id="meta_share_img" />
 
-
     <?php wp_head(); ?>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -65,9 +64,9 @@
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MBPD4LZ');</script>
     <!-- End Google Tag Manager -->
- 
+
 </head>
-<body <?php body_class(); ?>>
+<body>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-MBPD4LZ
@@ -81,6 +80,7 @@
     let max_posts_mob = null;
 </script>
 
+<div class="point-1400px"></div>
 <div class="point-767px"></div>
 
 <?php get_template_part( 'template-parts/content', 'overlay' ); ?>

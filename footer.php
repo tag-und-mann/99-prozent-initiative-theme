@@ -161,16 +161,16 @@
             });
 
             function changeHomeHeaderSliderNavigationPosition() {
-                if($('.point-767px').css('display') === 'none') {
+                if($('.point-1400px').css('display') === 'none') {
                     let home_header_slider_content_height = home_header_slider.find('.slick-slide.slick-current').find('.container-main > div > div').height() + 120 + 40;
                     home_header_slider.find('.slick-dots').css('top', home_header_slider_content_height + 'px');
                     home_header_slider.find('.slick-prev').css('top', (home_header_slider_content_height / 2) + 'px');
                     home_header_slider.find('.slick-next').css('top', (home_header_slider_content_height / 2) + 'px');
                 }else{
                     let home_header_slider_content_height = home_header_slider.find('.slick-slide.slick-current').find('.container-main > div > div').height() + 120 + 40;
-                    home_header_slider.find('.slick-dots').css('top', home_header_slider_content_height + 'px');
-                    home_header_slider.find('.slick-prev').css('top', (home_header_slider_content_height + 10) + 'px');
-                    home_header_slider.find('.slick-next').css('top', (home_header_slider_content_height + 10) + 'px');
+                    home_header_slider.find('.slick-dots').css('top', '90%');
+                    home_header_slider.find('.slick-prev').css('top', '90%');
+                    home_header_slider.find('.slick-next').css('top', '90%');
                 }
             }
         });

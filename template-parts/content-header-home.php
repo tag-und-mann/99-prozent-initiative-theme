@@ -43,7 +43,9 @@ if(ICL_LANGUAGE_CODE == 'de'){
                 $header_text_line_height = (int)get_sub_field('font_size') * 2;
                 ?>
 
-                <div class="home-header-bg home-header-bg-news" style="background-image: url('<?php echo $bg_img_url; ?>')">
+                <div class="home-header-bg home-header-bg-news">
+
+                    <div class="home-header-bg-image <?php echo $bg_img_url ? 'show-relative' : ''; ?>" style="background-image: url('<?php echo $bg_img_url; ?>')"></div>
 
                     <div class="triangle-top">
                         <?php set_query_var( 'bg_color', '#e8e8e8' ); ?>
@@ -55,7 +57,7 @@ if(ICL_LANGUAGE_CODE == 'de'){
                     <div class="container-main">
 
                         <?php if($header_slider_type == 'custom'): ?>
-                            <div class="home-header-content-news">
+                            <div class="home-header-content-news <?php echo $bg_img_url ? '' : 'full'; ?>">
                                 <div>
                                     <?php if(is_array(get_sub_field('link')) && get_post_type(get_sub_field('link')[0]) == 'post' ): ?>
                                         <p class="date"><?php echo date($date_format, strtotime(get_post(get_sub_field('link')[0])->post_date)); ?></p>

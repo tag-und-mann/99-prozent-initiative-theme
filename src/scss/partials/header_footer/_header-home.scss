@@ -13,16 +13,24 @@
 
   .home-header-bg{
     background-color: $orange;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     min-height: 970px;
     position: relative;
 
+    .home-header-bg-image{
+      width: 48%;
+      height: inherit;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
     .triangle-top{
       @include triangle();
-      bottom: -2px;
+      bottom: -4px;
       height: 325px;
       z-index: 2;
       width: 101%;
@@ -83,6 +91,13 @@
     position: relative;
     z-index: 3;
     padding-top: 120px;
+
+    &.full{
+      > div{
+        width: 100%;
+        padding-left: 0;
+      }
+    }
 
     > div{
       width: 51%;
@@ -146,18 +161,37 @@
 
 @media (max-width: 1400px){
   .home-header {
-    min-height: 670px;
-
-    .home-header-slider{
-      min-height: 670px;
-    }
 
     .home-header-bg{
-      min-height: 670px;
+
+      .home-header-bg-image{
+        &.show-relative{
+          height: 350px;
+          width: 100%;
+          top: 0;
+          left: 0;
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
     }
 
     .home-header-content-news{
-      min-height: 670px;
+      min-height: inherit;
+      height: inherit;
+      padding-top: 30px;
+
+      &.full{
+        top: 45%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        left: 50%;
+        padding-top: 0;
+
+      }
 
       > div{
         width: 90%;
@@ -172,19 +206,25 @@
 @media (max-width: $tablet){
   .home-header {
     padding-top: 54px;
-    min-height: 670px;
+    min-height: 750px;
 
     .home-header-slider{
-      min-height: 670px;
+      min-height: 750px;
     }
 
     .home-header-bg{
-      min-height: 670px;
+      min-height: 750px;
+
+      .home-header-bg-image{
+        &.show-relative{
+          height: 250px;
+        }
+      }
     }
 
     .home-header-content-news{
       min-height: 670px;
-      padding-top: 54px;
+
 
       > div{
         width: 90%;
@@ -195,21 +235,28 @@
   }
 }
 
+
 @media (max-width: $tabletV){
   .home-header {
     height: unset;
-    min-height: unset;
+    min-height: 700px;
     background-color: $white;
 
     .home-header-slider{
       height: unset;
-      min-height: unset;
+      min-height: 700px;
     }
 
     .home-header-bg{
       height: unset;
-      min-height: unset;
+      min-height: 700px;
       background-color: $white;
+
+      .home-header-bg-image{
+        &.show-relative{
+          height: 200px;
+        }
+      }
 
       .triangle-top{
         @include triangle_tablet();
@@ -218,15 +265,13 @@
       &.home-header-bg-news{
         background-color: $grey_light;
         height: 600px;
-        min-height: unset;
-        margin-top: 0;
+        min-height: 700px;
       }
     }
 
     .home-header-content-news{
-      height: 600px;
+      height: unset;
       min-height: unset;
-      padding-top: 60px;
 
       > div{
         width: 90%;
@@ -256,22 +301,29 @@
 
 @media (max-width: $mob){
   .home-header {
+    min-height: 650px;
 
-    .home-header-bg {
+    .home-header-slider{
+      min-height: 650px;
+    }
+
+    .home-header-bg{
+      min-height: 650px;
+
+      .home-header-bg-image{
+        &.show-relative{
+          height: 150px;
+        }
+      }
+
+
       &.home-header-bg-news{
-        height: unset;
-        min-height: 500px;
+        min-height: 650px;
       }
 
       .triangle-top {
         @include triangle_mob();
       }
-    }
-
-    .home-header-content-news {
-      height: unset;
-      min-height: 500px;
-      padding-bottom: 100px;
 
       > div{
         width: 100%;

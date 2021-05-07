@@ -231,6 +231,7 @@ video{
   height: auto;
 }
 
+.point-1400px,
 .point-767px{
   display: none;
   width: 0;
@@ -252,6 +253,12 @@ video{
 
   i.mppfic-close-cancel-circular:before{
     display: inline-block!important;
+  }
+}
+
+@media (max-width: 1400px){
+  .point-1400px{
+    display: block;
   }
 }
 
