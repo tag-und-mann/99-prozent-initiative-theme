@@ -9,13 +9,6 @@ if($header_slider_type == 'custom'){
 }
 ?>
 
-<?php
-$date_format = 'd F Y';
-
-if(ICL_LANGUAGE_CODE == 'de'){
-    $date_format = 'd. F Y';
-}
-?>
 
 <?php set_query_var( 'header_slider_type', $header_slider_type ); ?>
 <?php get_template_part( 'template-parts/content', 'header-navigation' ); ?>
@@ -60,7 +53,7 @@ if(ICL_LANGUAGE_CODE == 'de'){
                             <div class="home-header-content-news <?php echo $bg_img_url ? '' : 'full'; ?>">
                                 <div>
                                     <?php if(is_array(get_sub_field('link')) && get_post_type(get_sub_field('link')[0]) == 'post' ): ?>
-                                        <p class="date"><?php echo date($date_format, strtotime(get_post(get_sub_field('link')[0])->post_date)); ?></p>
+                                        <p class="date"><?php echo getFormatedDate(date('j-n-Y', strtotime(get_post(get_sub_field('link')[0])->post_date)), ICL_LANGUAGE_CODE); ?></p>
                                     <?php endif; ?>
 
                                     <h1 class="title" style="
@@ -84,7 +77,7 @@ if(ICL_LANGUAGE_CODE == 'de'){
                         <?php else: ?>
                             <div class="home-header-content-news">
                                 <div>
-                                    <p class="date"><?php echo date($date_format, strtotime(get_post(get_sub_field('link')[0])->post_date)); ?></p>
+                                    <p class="date"><?php echo getFormatedDate(date('j-n-Y', strtotime(get_post(get_sub_field('link')[0])->post_date)), ICL_LANGUAGE_CODE); ?></p>
 
                                     <h1 class="title" style="
                                             font-size: <?php echo $header_text_font_size . 'px'; ?>;

@@ -114,4 +114,142 @@ function get_rand_testimonial($testimonials_random, $last_two_used_testimonials)
 }
 
 
+function getTranslatedMonth($month, $lang){
+    if($lang == 'it') {
+        switch ($month) {
+            case '1':
+                $month = 'Gennaio';
+                break;
+            case '2':
+                $month = 'Febbraio';
+                break;
+            case '3':
+                $month = 'Marzo';
+                break;
+            case '4':
+                $month = 'Aprile';
+                break;
+            case '5':
+                $month = 'Maggio';
+                break;
+            case '6':
+                $month = 'Giugno';
+                break;
+            case '7':
+                $month = 'Luglio';
+                break;
+            case '8':
+                $month = 'Agosto';
+                break;
+            case '9':
+                $month = 'Settembre';
+                break;
+            case '10':
+                $month = 'Ottobre';
+                break;
+            case '11':
+                $month = 'Novembre';
+                break;
+            case '12':
+                $month = 'Dicembre';
+                break;
+        }
+    }
+
+
+    if($lang == 'de') {
+        switch ($month) {
+            case '1':
+                $month = 'Januar';
+                break;
+            case '2':
+                $month = 'Februar';
+                break;
+            case '3':
+                $month = 'März';
+                break;
+            case '4':
+                $month = 'April';
+                break;
+            case '5':
+                $month = 'Mai';
+                break;
+            case '6':
+                $month = 'Juni';
+                break;
+            case '7':
+                $month = 'Juli';
+                break;
+            case '8':
+                $month = 'August';
+                break;
+            case '9':
+                $month = 'September';
+                break;
+            case '10':
+                $month = 'Oktober';
+                break;
+            case '11':
+                $month = 'November';
+                break;
+            case '12':
+                $month = 'Dezember';
+                break;
+        }
+    }
+
+    if($lang == 'fr') {
+        switch ($month) {
+            case '1':
+                $month = 'Janvier ';
+                break;
+            case '2':
+                $month = 'Février';
+                break;
+            case '3':
+                $month = 'Mars';
+                break;
+            case '4':
+                $month = 'Avril';
+                break;
+            case '5':
+                $month = 'Mai';
+                break;
+            case '6':
+                $month = 'Juin';
+                break;
+            case '7':
+                $month = 'Juillet';
+                break;
+            case '8':
+                $month = 'Août';
+                break;
+            case '9':
+                $month = 'Septembre';
+                break;
+            case '10':
+                $month = 'Octobre';
+                break;
+            case '11':
+                $month = 'Novembre';
+                break;
+            case '12':
+                $month = 'Décembre';
+                break;
+        }
+    }
+
+    return $month;
+}
+
+
+function getFormatedDate($date, $lang){
+    $date_arr = explode('-', $date);
+
+    if($lang == 'de'){
+        return $date_arr[0] . '. ' . getTranslatedMonth($date_arr[1], $lang) . ' ' . $date_arr[2];
+    }
+
+    return $date_arr[0] . ' ' . getTranslatedMonth($date_arr[1], $lang) . ' ' . $date_arr[2];
+}
 
