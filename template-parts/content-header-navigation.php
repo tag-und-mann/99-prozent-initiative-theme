@@ -12,7 +12,7 @@
             <div class="mobile-menu-content-inner">
 
                 <div class="menu">
-<!--                    --><?php //navigation_main_menu(); ?>
+                    <?php navigation_main_menu(); ?>
                 </div>
 
                 <div class="lang-and-socials">
@@ -50,11 +50,11 @@
             <a href="<?php echo home_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular.svg" /></a>
         <?php endif; ?>
 
-<!--        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/images/burger.svg" class="burger-open" />-->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/burger.svg" class="burger-open" />
 
         <div class="nav-left">
             <div class="menu">
-<!--                --><?php //navigation_main_menu(); ?>
+                <?php navigation_main_menu(); ?>
             </div>
 
 

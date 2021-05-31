@@ -12,7 +12,7 @@
             </a>
 
             <div class="menu menu-mob">
-<!--                --><?php //navigation_footer_menu(); ?>
+                <?php navigation_footer_menu(); ?>
             </div>
 
             <div class="footer-lang-and-socials footer-lang-and-socials-mob">
@@ -73,9 +73,9 @@
         </script>
 
         <div class="col-2">
-<!--            <p class="footer-col-title">--><?php //echo __('Navigation', 'economiesuisse') ?><!--</p>-->
+            <p class="footer-col-title"><?php echo __('Navigation', 'economiesuisse') ?></p>
             <div class="menu menu-desk">
-<!--                --><?php //navigation_footer_menu(); ?>
+                <?php navigation_footer_menu(); ?>
             </div>
         </div>
 
