@@ -2,7 +2,7 @@
 
     <?php if($form_block_show_line): ?>
         <div class="triangle-top">
-            <?php set_query_var( 'bg_color', '#ff2d18' ); ?>
+            <?php set_query_var( 'bg_color', '#cc1719' ); ?>
             <?php get_template_part( 'template-parts/lines/content', 'default-line' ); ?>
         </div>
     <?php endif; ?>

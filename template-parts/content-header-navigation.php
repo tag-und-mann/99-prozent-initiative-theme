@@ -47,7 +47,7 @@
         <?php elseif(ICL_LANGUAGE_CODE == 'it'): ?>
             <a href="<?php echo home_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular_IT.png" /></a>
         <?php else: ?>
-            <a href="<?php echo home_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular.svg" /></a>
+            <a href="<?php echo home_url(); ?>" class="logo"><img class="logo-de" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular.svg" /></a>
         <?php endif; ?>
 
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/burger.svg" class="burger-open" />

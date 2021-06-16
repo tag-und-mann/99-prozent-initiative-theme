@@ -81,6 +81,22 @@
                    src="https://www.facebook.com/tr?id=4081630918557671&ev=PageView&noscript=1"
         /></noscript>
     <!-- End Facebook Pixel Code -->
+
+    <script type="text/javascript">
+        var MTUserId='2555c086-8ff6-47ec-8a1e-c45b8f10c050';
+        var MTFontIds = new Array();
+
+        MTFontIds.push("5924659"); // Cocogoose Narrows W03 Compressed Regular
+        MTFontIds.push("5924750"); // Cocogoose Narrows W03 Compressed Bold
+        (function() {
+            var mtTracking = document.createElement('script');
+            mtTracking.type='text/javascript';
+            mtTracking.async='true';
+            mtTracking.src='<?php echo get_template_directory_uri(); ?>/assets/js/mtiFontTrackingCode.js';
+
+            (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(mtTracking);
+        })();
+    </script>
 </head>
 <body>
 

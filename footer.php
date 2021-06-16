@@ -7,7 +7,7 @@
                 <?php elseif(ICL_LANGUAGE_CODE == 'it'): ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer-regular_IT.png" />
                 <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer-regular.svg" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer-regular.svg" class="logo-de" />
                 <?php endif; ?>
             </a>
 

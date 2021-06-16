@@ -10,7 +10,7 @@
                     <use xlink:href="#path-1"></use>
                 </mask>
                 <g fill-rule="nonzero"></g>
-                <g id="Color-/-Highlight" mask="url(#mask-2)" fill="#ff2d18" fill-rule="evenodd">
+                <g id="Color-/-Highlight" mask="url(#mask-2)" fill="#cc1719" fill-rule="evenodd">
                     <polygon id="Color" points="0 0 29 0 29 29 0 29"></polygon>
                 </g>
             </g>

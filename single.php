@@ -49,7 +49,7 @@ get_header(); ?>
 
                     <div class="triangle-bottom">
                         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <polygon fill="#ff2d18" points="0,0 100,0 0,100"/>
+                            <polygon fill="#cc1719" points="0,0 100,0 0,100"/>
                         </svg>
                     </div>
                 </div>

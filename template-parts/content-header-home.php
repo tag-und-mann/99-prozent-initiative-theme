@@ -33,7 +33,7 @@ if($header_slider_type == 'custom'){
                 }
 
                 $header_text_font_size = get_sub_field('font_size');
-                $header_text_line_height = (int)get_sub_field('font_size') * 2;
+                $header_text_line_height = (int)get_sub_field('font_size') + 16;
                 ?>
 
                 <div class="home-header-bg home-header-bg-news">
@@ -66,7 +66,7 @@ if($header_slider_type == 'custom'){
                                     </h1>
 
                                     <?php if(is_array(get_sub_field('link'))): ?>
-                                        <a href="<?php echo get_permalink(get_sub_field('link')[0]); ?>" class="button button-background-blue">
+                                        <a href="<?php echo get_permalink(get_sub_field('link')[0]); ?>" class="button button-background-blue-text-white">
                                            <div>
                                                <span><?php echo __('Weiterlesen', 'economiesuisse') ?></span>
                                            </div>
@@ -90,7 +90,7 @@ if($header_slider_type == 'custom'){
 
                                     <div class="link">
                                         <?php if(get_sub_field('show_button')): ?>
-                                            <a href="<?php echo get_the_permalink($post_id); ?>" class="button button-background-blue">
+                                            <a href="<?php echo get_the_permalink($post_id); ?>" class="button button-background-blue-text-white">
                                                 <div>
                                                     <span><?php echo __('Weiterlesen', 'economiesuisse') ?></span>
                                                 </div>

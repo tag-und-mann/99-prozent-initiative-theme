@@ -75,12 +75,12 @@
      style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1">
     <polyline
        id="Path-2"
-       stroke="#ff2d18"
+       stroke="#cc1719"
        stroke-width="4"
        points="0 48.7130173 188.230556 -8.52651283e-14 271 100.14968 440 100.14968 583 158.142739 720 111.962491 840 185.63724 1099.86109 158.142739 1365 285.324689" />
     <polygon
        id="Triangle"
-       fill="#ff2d18"
+       fill="#cc1719"
        points="1366,263.66712 1384,296.66712 1348,296.66712 1361.8955,283.04817 " />
   </g>
 </svg>

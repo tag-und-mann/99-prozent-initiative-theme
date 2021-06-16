@@ -52,6 +52,10 @@
       height: 74px;
       width: auto;
       cursor: pointer;
+
+      &.logo-de{
+        height: 100px;
+      }
     }
   }
 
@@ -216,6 +220,10 @@
 
       img{
         height: 46px;
+
+        &.logo-de{
+          height: 46px;
+        }
       }
     }
 

@@ -44,6 +44,13 @@ footer{
         width: 90%;
         height: auto;
 
+        &.logo-de{
+          width: 100px;
+          max-width: unset;
+          margin-left: -8px;
+          margin-top: -8px;
+        }
+
         &.logo-img-desk-fr{
           width: 200px;
         }
@@ -224,6 +231,12 @@ footer{
         img{
           width: 96px;
           box-sizing: border-box;
+
+          &.logo-de{
+            width: 96px;
+            margin-left: -20px;
+            margin-top: 0;
+          }
 
           &.logo-img-mob-fr{
             width: 110px;

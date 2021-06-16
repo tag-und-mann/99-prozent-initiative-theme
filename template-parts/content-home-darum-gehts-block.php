@@ -80,12 +80,12 @@ $video_or_bild = get_field('home_darum_gehts_video_oder_bild');
                     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1">
                 <polyline
                         id="Path-2"
-                        stroke="#ff2d18"
+                        stroke="#cc1719"
                         stroke-width="4"
                         points="0 48.7130173 188.230556 -8.52651283e-14 271 100.14968 440 100.14968 583 158.142739 720 111.962491 840 185.63724 1099.86109 158.142739 1365 285.324689" />
                 <polygon
                         id="Triangle"
-                        fill="#ff2d18"
+                        fill="#cc1719"
                         points="1366,263.66712 1384,296.66712 1348,296.66712 1361.8955,283.04817 " />
             </g>
         </svg>
@@ -147,7 +147,7 @@ $video_or_bild = get_field('home_darum_gehts_video_oder_bild');
                                 <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g id="Landingpage" transform="translate(-946.000000, -2341.000000)">
                                         <g id="Group-8" transform="translate(946.000000, 2341.000000)">
-                                            <rect id="Rectangle" fill="#ff2d18" x="0" y="0" width="56" height="56"></rect>
+                                            <rect id="Rectangle" fill="#cc1719" x="0" y="0" width="56" height="56"></rect>
                                             <polygon id="Triangle" fill="#FFFFFF" transform="translate(30.500000, 28.000000) rotate(90.000000) translate(-30.500000, -28.000000) " points="30.5 16 43 40 18 40"></polygon>
                                         </g>
                                     </g>
