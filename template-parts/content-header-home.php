@@ -22,6 +22,8 @@ if($header_slider_type == 'custom'){
 
                 <?php
 
+                $full_or_half = get_sub_field('full_or_half');
+
                 if($header_slider_type == 'news'){
                     $post_id = get_sub_field('post')[0];
                     $bg_img_url = get_field('header_bild', $post_id)['url'];
@@ -38,19 +40,21 @@ if($header_slider_type == 'custom'){
 
                 <div class="home-header-bg home-header-bg-news">
 
-                    <div class="home-header-bg-image <?php echo $bg_img_url ? 'show-relative' : ''; ?>" style="background-image: url('<?php echo $bg_img_url; ?>')"></div>
+                    <div class="home-header-bg-image <?php echo $full_or_half == 'half' ? 'show-relative' : 'show-full'; ?>" style="background-image: url('<?php echo $bg_img_url; ?>')"></div>
 
                     <div class="triangle-top">
                         <?php set_query_var( 'bg_color', '#e8e8e8' ); ?>
                         <?php get_template_part( 'template-parts/lines/content', 'header-line' ); ?>
                     </div>
 
-                    <div class="home-header-bg-filter"></div>
+                    <?php if($full_or_half == 'half'): ?>
+                        <div class="home-header-bg-filter"></div>
+                    <?php endif; ?>
 
                     <div class="container-main">
 
                         <?php if($header_slider_type == 'custom'): ?>
-                            <div class="home-header-content-news <?php echo $bg_img_url ? '' : 'full'; ?>">
+                            <div class="home-header-content-news <?php echo $full_or_half == 'half' ? '' : 'full'; ?>">
                                 <div>
                                     <?php if(is_array(get_sub_field('link')) && get_post_type(get_sub_field('link')[0]) == 'post' ): ?>
                                         <p class="date"><?php echo getFormatedDate(date('j-n-Y', strtotime(get_post(get_sub_field('link')[0])->post_date)), ICL_LANGUAGE_CODE); ?></p>
@@ -75,7 +79,7 @@ if($header_slider_type == 'custom'){
                                 </div>
                             </div>
                         <?php else: ?>
-                            <div class="home-header-content-news">
+                            <div class="home-header-content-news <?php echo $full_or_half == 'half' ? '' : 'full'; ?>">
                                 <div>
                                     <p class="date"><?php echo getFormatedDate(date('j-n-Y', strtotime(get_post(get_sub_field('link')[0])->post_date)), ICL_LANGUAGE_CODE); ?></p>
 
