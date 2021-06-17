@@ -28,8 +28,10 @@
       background-repeat: no-repeat;
 
       &.show-full{
-        width: 100%;
+        width: 115%;
         height: 100%;
+        left: -15%;
+        background-position: center;
       }
     }
 
