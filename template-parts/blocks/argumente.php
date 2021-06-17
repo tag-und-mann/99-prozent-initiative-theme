@@ -20,9 +20,19 @@ if( !empty($block['align']) ) {
 
 
 $bild_pos = get_field('argumente_gb_bild_links_oder_rechts');
-$number = get_field('argumente_gb_number');
 $title = get_field('argumente_gb_title');
 $text = get_field('argumente_gb_text');
+
+
+$number = get_field('argumente_gb_number');
+$bild = get_field('argumente_gb_bild');
+
+$bild_url = '';
+if($bild){
+    $bild_url = $bild['sizes']['medium'];
+}
+
+$bild_or_number = get_field('argumente_gb_nummer_oder_bild');
 
 $counter = uniqid();
 
@@ -34,7 +44,13 @@ $counter = uniqid();
         <?php if($bild_pos == 'right'): ?>
             <div class="image-container image-container-mob" data-counter="<?php echo $counter; ?>">
                 <div class="image">
-                    <p><?php echo $number; ?></p>
+                    <?php if($bild_or_number == 'Bild'): ?>
+                        <?php if($bild): ?>
+                            <img src="<?php echo $bild_url; ?>">
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <p><?php echo $number; ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
@@ -42,7 +58,13 @@ $counter = uniqid();
         <?php if($bild_pos == 'left'): ?>
             <div class="image-container image-container-left" data-counter="<?php echo $counter; ?>">
                 <div class="image">
-                    <p><?php echo $number; ?></p>
+                    <?php if($bild_or_number == 'Bild'): ?>
+                        <?php if($bild): ?>
+                            <img src="<?php echo $bild_url; ?>">
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <p><?php echo $number; ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
@@ -60,7 +82,13 @@ $counter = uniqid();
         <?php if($bild_pos == 'right'): ?>
             <div class="image-container image-container-right image-container-desk" data-counter="<?php echo $counter; ?>">
                 <div class="image">
-                    <p><?php echo $number; ?></p>
+                    <?php if($bild_or_number == 'Bild'): ?>
+                        <?php if($bild): ?>
+                            <img src="<?php echo $bild_url; ?>">
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <p><?php echo $number; ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
