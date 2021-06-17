@@ -38,7 +38,7 @@ if($header_slider_type == 'custom'){
                 $header_text_line_height = (int)get_sub_field('font_size') + 16;
                 ?>
 
-                <div class="home-header-bg home-header-bg-news">
+                <div class="home-header-bg home-header-bg-news <?php echo $full_or_half == 'half' ? 'half' : 'full'; ?>">
 
                     <div class="home-header-bg-image <?php echo $full_or_half == 'half' ? 'show-relative' : 'show-full'; ?>" style="background-image: url('<?php echo $bg_img_url; ?>')"></div>
 
@@ -54,13 +54,13 @@ if($header_slider_type == 'custom'){
                     <div class="container-main">
 
                         <?php if($header_slider_type == 'custom'): ?>
-                            <div class="home-header-content-news <?php echo $full_or_half == 'half' ? '' : 'full'; ?>">
+                            <div class="home-header-content-news">
                                 <div>
                                     <?php if(is_array(get_sub_field('link')) && get_post_type(get_sub_field('link')[0]) == 'post' ): ?>
                                         <p class="date"><?php echo getFormatedDate(date('j-n-Y', strtotime(get_post(get_sub_field('link')[0])->post_date)), ICL_LANGUAGE_CODE); ?></p>
                                     <?php endif; ?>
 
-                                    <h1 class="title" style="
+                                    <h1 class="title <?php echo $full_or_half == 'half' ? 'half' : 'full'; ?>" style="
                                             font-size: <?php echo $header_text_font_size . 'px'; ?>;
                                             line-height: <?php echo $header_text_line_height . 'px'; ?>;"
                                     >
@@ -79,11 +79,11 @@ if($header_slider_type == 'custom'){
                                 </div>
                             </div>
                         <?php else: ?>
-                            <div class="home-header-content-news <?php echo $full_or_half == 'half' ? '' : 'full'; ?>">
+                            <div class="home-header-content-news">
                                 <div>
                                     <p class="date"><?php echo getFormatedDate(date('j-n-Y', strtotime(get_post(get_sub_field('link')[0])->post_date)), ICL_LANGUAGE_CODE); ?></p>
 
-                                    <h1 class="title" style="
+                                    <h1 class="title <?php echo $full_or_half == 'half' ? 'half' : 'full'; ?>" style="
                                             font-size: <?php echo $header_text_font_size . 'px'; ?>;
                                             line-height: <?php echo $header_text_line_height . 'px'; ?>;"
                                     >
