@@ -43,9 +43,9 @@
 <nav class="nav <?php echo isset($header_slider_type) && $header_slider_type == 'news' ? 'nav-home-white' : ''; ?>">
     <div class="container-main navigation-container">
         <?php if(ICL_LANGUAGE_CODE == 'fr'): ?>
-            <a href="<?php echo home_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular_FR.png" /></a>
+            <a href="<?php echo home_url(); ?>" class="logo"><img class="logo-de" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular_FR.svg" /></a>
         <?php elseif(ICL_LANGUAGE_CODE == 'it'): ?>
-            <a href="<?php echo home_url(); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular_IT.png" /></a>
+            <a href="<?php echo home_url(); ?>" class="logo"><img class="logo-de" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular_IT.svg" /></a>
         <?php else: ?>
             <a href="<?php echo home_url(); ?>" class="logo"><img class="logo-de" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular.svg" /></a>
         <?php endif; ?>

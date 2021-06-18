@@ -3,11 +3,11 @@
         <div class="col-1">
             <a href="<?php echo home_url(); ?>" class="logo">
                 <?php if(ICL_LANGUAGE_CODE == 'fr'): ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer-regular_FR.png" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular_FR.svg" class="logo-de" />
                 <?php elseif(ICL_LANGUAGE_CODE == 'it'): ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer-regular_IT.png" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular_IT.svg" class="logo-de" />
                 <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer-regular.svg" class="logo-de" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-regular.svg" class="logo-de" />
                 <?php endif; ?>
             </a>
 
