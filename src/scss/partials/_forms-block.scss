@@ -7,8 +7,18 @@
     @include triangle_relative();
   }
 
-  &.gray{
-    background-color: $grey_light;
+  &.orange{
+    background-color: $orange;
+
+    .title-block{
+      .sub-heading1{
+        color: $white;
+      }
+    }
+  }
+
+  &.white{
+    background-color: $white;
 
     .title-block{
       .sub-heading1{
@@ -17,12 +27,12 @@
     }
   }
 
-  &.orange{
-    background-color: $orange;
+  &.gray{
+    background-color: $grey_light;
 
     .title-block{
       .sub-heading1{
-        color: $white;
+        color: $orange;
       }
     }
   }

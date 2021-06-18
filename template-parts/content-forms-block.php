@@ -1,5 +1,5 @@
 <?php
-$triagnle_color = '#ffffff';
+$triagnle_color = '#e8e8e8';
 if($forms_block_bg_color == 'orange'){
     $triagnle_color = '#cc1719';
 }

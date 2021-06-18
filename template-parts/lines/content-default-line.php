@@ -1,3 +1,13 @@
+<?php
+if($bg_color == 'orange'){
+    $bg_color = '#cc1719';
+}
+
+if($bg_color == 'gray'){
+    $bg_color = '#e8e8e8';
+}
+?>
+
 <svg
     preserveAspectRatio="none"
     xmlns:svg="http://www.w3.org/2000/svg"
