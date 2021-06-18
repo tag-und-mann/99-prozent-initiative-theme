@@ -1,8 +1,28 @@
+<?php
+$triagnle_color = '#ffffff';
+if($forms_block_bg_color == 'orange'){
+    $triagnle_color = '#cc1719';
+}
+
+if($forms_block_bg_color == 'white'){
+    $triagnle_color = '#ffffff';
+}
+
+if($forms_block_bg_color == 'gray'){
+    $triagnle_color = '#e8e8e8';
+}
+
+if(is_single() || is_404()){
+    $triagnle_color = '#e8e8e8';
+}
+
+?>
+
 <section class="forms-block <?php echo $forms_block_bg_color; ?>">
 
     <?php if($form_block_show_line): ?>
         <div class="triangle-top">
-            <?php set_query_var( 'bg_color', $forms_block_bg_color == 'orange' ? '#cc1719' : '#e8e8e8' ); ?>
+            <?php set_query_var( 'bg_color', $triagnle_color ); ?>
             <?php get_template_part( 'template-parts/lines/content', 'default-line' ); ?>
         </div>
     <?php endif; ?>

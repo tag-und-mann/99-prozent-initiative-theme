@@ -83,7 +83,7 @@ $rows_count = count(get_field('darum_gehts_block__list'));
     <?php $i++; endwhile; ?>
 
     <div class="triangle-bottom" style="background-color: <?php echo count(get_field('darum_gehts_block__list')) % 2 == 0 ? '#e8e8e8' : '#ffffff'; ?>">
-        <?php set_query_var( 'bg_color', '#cc1719'); ?>
+        <?php set_query_var( 'bg_color', get_field('newsletter_block_color', get_the_ID())); ?>
         <?php get_template_part( 'template-parts/lines/content', 'default-line' ); ?>
     </div>
 
