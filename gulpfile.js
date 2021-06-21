@@ -9,7 +9,7 @@ let sourcemaps = require('gulp-sourcemaps');
 
 
 // compile SASS
-gulp.task('scss', function () {
+gulp.task('scss', gulp.series([], function () {
     return gulp.src(['src/scss/app.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -19,9 +19,9 @@ gulp.task('scss', function () {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('assets/css'))
         .pipe(browserSync.stream());
-});
+}));
 
-gulp.task('scss-editor', function () {
+gulp.task('scss-editor', gulp.series([], function () {
     return gulp.src(['src/scss/editor.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -31,39 +31,39 @@ gulp.task('scss-editor', function () {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('assets/css'))
         .pipe(browserSync.stream());
-});
+}));
 
 
 // move js to dist
-gulp.task('js', function () {
+gulp.task('js', gulp.series([], function () {
     return gulp.src('src/js/*')
         .pipe(gulp.dest('assets/js'))
-});
+}));
 
 
 // move css to dist
-gulp.task('css', function () {
+gulp.task('css', gulp.series([], function () {
     return gulp.src('src/css/*')
         .pipe(gulp.dest('assets/css'))
-});
+}));
 
 
 
 
 // watch sass & serve
-gulp.task('serve', ['scss', 'scss-editor', 'js'], function() {
+gulp.task('serve', gulp.series(['scss', 'scss-editor', 'js'], function() {
     browserSync.init({
         // server: "./",
         proxy: "http://localhost:8888/economiesuisse99/"
     });
 
-    gulp.watch(['src/js/*'], ['js']);
-    gulp.watch(['src/scss/**/*.scss'], ['scss']);
+    gulp.watch(['src/js/*'], gulp.series(['js']));
+    gulp.watch(['src/scss/**/*.scss'], gulp.series(['scss']));
     gulp.watch('*.php').on('change', browserSync.reload);
-});
+}));
 
 
 
-gulp.task('default', ['scss', 'serve', 'js', 'css', 'scss-editor']);
+gulp.task('default', gulp.series(['scss', 'serve', 'js', 'css', 'scss-editor']));
 
 
