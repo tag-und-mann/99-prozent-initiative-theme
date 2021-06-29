@@ -244,7 +244,9 @@
       border-radius: 0;
       box-shadow: none;
       position: relative;
-      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-transform: inherit;
+      -webkit-font-smoothing: antialiased;
 
       @include linkAnimShareBtns($orange, $white);
 

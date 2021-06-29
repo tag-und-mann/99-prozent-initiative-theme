@@ -1,6 +1,6 @@
 .lang-switcher{
   height: 20px;
-  width: 20px;
+  width: 24px;
   margin-left: 72px;
   margin-top: -16px;
   display: block;
@@ -29,7 +29,6 @@
           height: 20px;
           font-size: 12px;
           line-height: 12px;
-          text-transform: uppercase;
           font-family: $helvetica-bold;
           text-decoration: none;
           color: $white;
@@ -40,6 +39,13 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          letter-spacing: 2px;
+          text-transform: inherit;
+          -webkit-font-smoothing: antialiased;
+
+          span{
+            margin-left: 1px;
+          }
 
           &:hover{
             background-color: $white;
@@ -60,7 +66,7 @@
         li {
 
           ul{
-            width: 20px;
+            width: 24px;
             border-bottom: 2px solid $orange;
             border-top: 1px solid $orange;
             margin-left: -2px;
@@ -92,7 +98,7 @@ footer{
     display: inline-block;
     margin-left: 0;
     height: 20px;
-    width: 20px;
+    width: 24px;
     margin-right: 2px;
     padding-top: 3px;
 
@@ -151,14 +157,14 @@ footer{
 .mobile-menu{
   .lang-switcher{
     height: 20px;
-    width: 20px;
+    width: 24px;
     margin-left: 0;
     display: flex;
     justify-content: center;
 
     .wpml-ls-legacy-dropdown {
       height: 20px;
-      width: 20px;
+      width: 24px;
 
       a.wpml-ls-item-toggle:after {
         content: url("../images/menu-arrow-down-white.svg");
