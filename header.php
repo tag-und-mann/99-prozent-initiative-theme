@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html lang="de">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport"
