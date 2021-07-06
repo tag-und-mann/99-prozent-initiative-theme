@@ -125,7 +125,12 @@
 @media (max-width: $mob){
   .single-header{
     padding: 30px 0;
-    height: 370px;
+    height: unset;
+    padding-top: 160px;
+
+    &.small-h{
+      padding-top: 80px;
+    }
 
     .triangle-top{
       @include triangle_mob();
@@ -151,7 +156,8 @@
     .single-header-content{
       width: 100%;
       align-items: flex-end;
-      height: 370px;
+      height: unset;
+
 
       > div{
         padding-top: 0;

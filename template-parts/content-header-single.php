@@ -9,12 +9,12 @@ if($header_bg){
 }
 ?>
 
-<header class="single-header" style="background-image: url('<?php echo $header_bg_url; ?>')">
+<header class="single-header <?php echo $header_bg_url == '' ? 'small-h' : ''; ?>" style="background-image: url('<?php echo $header_bg_url; ?>')">
 
     <div class="home-header-bg-filter"></div>
 
     <div class="container-main">
-        <div class="container-header-text single-header-content">
+        <div class="container-header-text single-header-content <?php echo $header_bg_url == '' ? 'small-h' : ''; ?>">
             <div>
 
                 <h2 class="page-title" style="color: <?php echo $header_text_color; ?>">
