@@ -365,8 +365,8 @@
 
 @media (max-width: $tabletV) {
   .komitee-page{
-    background-color: $white;
-    padding: 26px 0 92px;
+    //background-color: $white;
+    padding: 26px 0 72px;
 
     .triangle-top{
       display: none;
@@ -376,20 +376,71 @@
       display: block;
     }
 
-    .komitee-nav{
-      display: none;
-    }
+    //.komitee-nav{
+    //  display: none;
+    //}
+    //
+    //.komitee-nav-mob{
+    //  display: flex;
+    //}
+    //
+    //.komitee-persons{
+    //  display: none;
+    //}
+    //
+    //.komitee-persons-mob{
+    //  display: block;
+    //}
+  }
+}
 
-    .komitee-nav-mob{
-      display: flex;
-    }
 
-    .komitee-persons{
-      display: none;
-    }
+@media (max-width: $mobH) {
+  .komitee-page {
+    .komitee-persons {
 
-    .komitee-persons-mob{
-      display: block;
+      .person-row-content {
+        > div {
+          hyphens: auto;
+        }
+      }
     }
   }
 }
+
+@media (max-width: $mob) {
+  .komitee-page{
+    padding: 26px 0 32px;
+
+    .komitee-nav {
+
+      > div {
+        width: calc(50% - 4px);
+      }
+    }
+
+    .komitee-persons{
+
+      .persons{
+        padding-bottom: 28px;
+      }
+
+      .head-row{
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .simple-row{
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .person-row-content{
+        > div{
+          padding: 12px 3px;
+        }
+      }
+    }
+  }
+}
+
