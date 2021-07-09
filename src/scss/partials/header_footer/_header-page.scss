@@ -1,6 +1,6 @@
 .page-header{
   background-color: $orange;
-  padding: 175px 0 146px;
+  padding: 175px 0 36px;
 
   .container-header-text{
     display: flex;
@@ -59,14 +59,14 @@
 
 @media (max-width: $tablet) {
   .page-header {
-    padding: 90px 0 90px;
+    padding: 90px 0 40px;
   }
 }
 
 @media (max-width: $tabletV){
   .page-header{
     background-color: $orange;
-    padding: 70px 0 70px;
+    padding: 70px 0 20px;
 
     .container-header-text{
       display: block;

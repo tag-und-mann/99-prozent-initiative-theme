@@ -16,13 +16,12 @@ get_header(); ?>
                 <?php get_template_part( 'template-parts/lines/content', 'header-line' ); ?>
             </div>
 
+
             <div class="komitee-page-content">
 
                 <div class="container-main">
 
                     <?php get_template_part( 'template-parts/content', 'komitee-nav-desk' ); ?>
-
-                    <?php get_template_part( 'template-parts/content', 'komitee-nav-mob' ); ?>
 
                 </div>
 
@@ -44,12 +43,6 @@ get_header(); ?>
                         .setClassToggle(".komitee-mitglieders-container", "visibleBlock")
                         .addTo(controller);
                 </script>
-
-                <div class="komitee-mitglieders-container-mob">
-                    <div class="loader-fade-block">
-                    </div>
-                    <?php get_template_part( 'template-parts/content', 'komitee-mitglieders-mob' ); ?>
-                </div>
 
             </div>
 

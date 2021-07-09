@@ -226,6 +226,14 @@ svg {
   }
 }
 
+.mitmachen-page,
+.default-page{
+  .triangle-top{
+    margin-bottom: -100px;
+  }
+}
+
+
 video{
   width: 100%;
   height: auto;
@@ -268,6 +276,23 @@ video{
       @include triangle_tablet();
     }
   }
+
+  .mitmachen-page,
+  .default-page{
+    .triangle-top{
+      margin-bottom: -40px;
+    }
+  }
+}
+
+@media (max-width: $mobH){
+  .mitmachen-page,
+  .default-page{
+    .triangle-top{
+      margin-bottom: -30px;
+
+    }
+  }
 }
 
 @media (max-width: $mob){
@@ -288,6 +313,13 @@ video{
 
     .content {
       padding-top: 20px;
+    }
+  }
+
+  .mitmachen-page,
+  .default-page{
+    .triangle-top{
+      margin-bottom: 0;
     }
   }
 
