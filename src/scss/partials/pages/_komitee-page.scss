@@ -9,6 +9,10 @@
     background-color: $orange;
   }
 
+  .komitee-page-content{
+    margin-top: -50px;
+  }
+
   .komitee-nav{
     display: flex;
     align-items: center;
@@ -346,6 +350,14 @@
 @media (max-width: $tablet) {
   .komitee-page{
 
+    .triangle-top{
+      @include triangle_tablet();
+    }
+
+    .komitee-page-content{
+      margin-top: 20px;
+    }
+
     .komitee-persons{
 
       .head-row{
@@ -366,14 +378,10 @@
 @media (max-width: $tabletV) {
   .komitee-page{
     //background-color: $white;
-    padding: 26px 0 72px;
+    padding: 0 0 72px;
 
     .triangle-top{
-      display: none;
-    }
-
-    .triangle-top-mob{
-      display: block;
+      @include triangle_mob();
     }
 
     //.komitee-nav{
@@ -410,7 +418,7 @@
 
 @media (max-width: $mob) {
   .komitee-page{
-    padding: 26px 0 32px;
+    padding: 0 0 32px;
 
     .komitee-nav {
 
